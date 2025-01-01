@@ -95,7 +95,7 @@ fig.update_layout(
 )
 
 # Step 7: Export to HTML file to view in the browser
-fig.write_html("backrooms_map.html")
+fig.write_html("index.html")
 
 # Show plot in notebook (optional)
 fig.show()
