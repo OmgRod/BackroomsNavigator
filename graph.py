@@ -1,20 +1,25 @@
+"""
+Graph creation and Plotly figure generation for the Backrooms Navigator.
+"""
+
 import pandas as pd
 import plotly.graph_objects as go
 import networkx as nx
 
 def create_graph():
+    """Create the graph using NetworkX."""
     # Step 1: Read the CSV file using Pandas
     data = pd.read_csv('levels.csv')
 
     # Step 2: Create a Graph using NetworkX
-    G = nx.Graph()
+    graph = nx.Graph()
 
     # Add nodes and edges based on both entrances and exits
     defined_nodes = set()  # Track the nodes that are already defined in the 'id' field
 
     for _, row in data.iterrows():
         # Add nodes with 'id', 'label' (name), and 'difficulty'
-        G.add_node(row['id'], label=row['name'], difficulty=row['difficulty'], url=row['url'])
+        graph.add_node(row['id'], label=row['name'], difficulty=row['difficulty'], url=row['url'])
         defined_nodes.add(row['id'])  # Mark the level as defined
 
         # Combine entrances and exits into one list (both can form connections)
@@ -27,18 +32,18 @@ def create_graph():
         # Add edges for each entrance/exit connection
         for connection in connections:
             connection = connection.strip()  # Remove any leading/trailing whitespace
-            if connection == "." or connection == "":  # Skip invalid or empty connections
+            if connection in (".", ""):  # Skip invalid or empty connections
                 continue
             try:
                 # Handle both types of connection (entrance or exit) as integer node IDs
                 connection_id = str(connection)
-                G.add_edge(row['id'], connection_id)
+                graph.add_edge(row['id'], connection_id)
             except ValueError:
                 continue  # Skip non-numeric connections (e.g., names)
 
     # Step 3: Generate the position of each node in the graph
     # Use spring_layout for natural clustering and set positions
-    pos = nx.spring_layout(G, seed=42, k=0.5, iterations=200)
+    pos = nx.spring_layout(graph, seed=42, k=0.5, iterations=200)
 
     # Adjust positions to stretch y-axis and keep connected nodes close
     scale_x = 1.5  # Moderate horizontal spread
@@ -47,20 +52,21 @@ def create_graph():
         pos[node] = (pos[node][0] * scale_x, pos[node][1] * scale_y)
 
     # Manually adjust positions for specific nodes
-    for node in G.nodes():
-        node_label = G.nodes[node].get('label', '')
+    for node in graph.nodes():
+        node_label = graph.nodes[node].get('label', '')
         if node_label == "Level 0":
             pos[node] = (0, -5)  # Place Level 0 at the bottom
         elif node_label == "The Frontrooms":
             pos[node] = (0, 5)  # Place The Frontrooms at the top
 
-    return G, pos, defined_nodes
+    return graph, pos, defined_nodes
 
-def create_plotly_figure(G, pos, defined_nodes):
+def create_plotly_figure(graph, pos, defined_nodes):
+    """Create the Plotly figure for the graph."""
     # Step 4: Prepare data for Plotly (nodes and edges)
     edge_x = []
     edge_y = []
-    for edge in G.edges():
+    for edge in graph.edges():
         x0, y0 = pos[edge[0]]
         x1, y1 = pos[edge[1]]
         edge_x.append(x0)
@@ -77,13 +83,13 @@ def create_plotly_figure(G, pos, defined_nodes):
     valid_difficulties = []  # List to store valid difficulty values
     urls = []  # List to store URLs for each node
 
-    for node in G.nodes():
+    for node in graph.nodes():
         x, y = pos[node]
         node_x.append(x)
         node_y.append(y)
 
         # Node label for display below the ID
-        node_label = G.nodes[node].get('label', f'{node}')
+        node_label = graph.nodes[node].get('label', str(node))
         node_id = node  # Assume 'node' itself is the ID
 
         # Check if the node is defined (i.e., in the 'id' column)
@@ -91,13 +97,13 @@ def create_plotly_figure(G, pos, defined_nodes):
             # If the node is not defined, it should be marked as green
             node_color.append("green")
             node_text.append(f"{node_label}")
-            hover_text.append(f"(Undefined Level)<br>Difficulty: N/A")  # Add specific hover text for undefined levels
+            hover_text.append("(Undefined Level)<br>Difficulty: N/A")
             urls.append("")  # No URL for undefined levels
         else:
             node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name
 
             # Check if difficulty is "?" and update hover text accordingly
-            node_difficulty = G.nodes[node].get('difficulty', 'N/A')
+            node_difficulty = graph.nodes[node].get('difficulty', 'N/A')
             if node_difficulty == "?":
                 hover_text.append("Difficulty: Undetermined")
                 node_color.append("black")  # Set color to black for undetermined difficulty
@@ -114,7 +120,7 @@ def create_plotly_figure(G, pos, defined_nodes):
 
                 # Add the difficulty number to the node text
                 # node_text[-1] += f"<br>Difficulty: {difficulty}"
-            urls.append(G.nodes[node].get('url', ""))  # Store the URL
+            urls.append(graph.nodes[node].get('url', ""))  # Store the URL
 
     # Step 5: Plot using Plotly for interactive map
     fig = go.Figure()
@@ -123,7 +129,7 @@ def create_plotly_figure(G, pos, defined_nodes):
     fig.add_trace(go.Scatter(
         x=edge_x, y=edge_y,
         mode='lines',
-        line=dict(width=0.5, color='gray'),
+        line={"width": 0.5, "color": 'gray'},
         hoverinfo='none'
     ))
 
@@ -131,24 +137,24 @@ def create_plotly_figure(G, pos, defined_nodes):
     scatter = go.Scatter(
         x=node_x, y=node_y,
         mode='markers+text',
-        marker=dict(
-            size=10,
-            color=node_color,
-            cmin=min(valid_difficulties, default=0),  # Minimum value for the colorscale
-            cmax=max(valid_difficulties, default=5),  # Maximum value for the colorscale
-            colorscale=[ 
+        marker={
+            "size": 10,
+            "color": node_color,
+            "cmin": min(valid_difficulties, default=0),  # Minimum value for the colorscale
+            "cmax": max(valid_difficulties, default=5),  # Maximum value for the colorscale
+            "colorscale": [ 
                 [0, "blue"],  # Difficulty 0: blue
                 [0.5, "#FFA07A"],  # Mid-range (2.5): light salmon
                 [1, "red"]  # Difficulty 5: dark-ish red
             ],
-            colorbar=dict(title='Difficulty')
-        ),
+            "colorbar": {"title": 'Difficulty'}
+        },
         text=node_text,  # Show ID and name below the node
         textposition="top center",
         hoverinfo='text',  # Show only hover text
         hovertext=hover_text,  # Specify the hover text separately
         customdata=urls,  # Store the URL data for each node
-        line=dict(width=2, color='black')
+        line={"width": 2, "color": 'black'}
     )
     fig.add_trace(scatter)
 
@@ -157,11 +163,11 @@ def create_plotly_figure(G, pos, defined_nodes):
         title="Backrooms Map",
         showlegend=False,
         hovermode='closest',
-        xaxis=dict(showgrid=False, zeroline=False),
-        yaxis=dict(showgrid=False, zeroline=False),
+        xaxis={"showgrid": False, "zeroline": False},
+        yaxis={"showgrid": False, "zeroline": False},
         dragmode="zoom",  # Allow zoom and drag
         autosize=True,
-        margin=dict(l=0, r=0, t=40, b=0),
+        margin={"l": 0, "r": 0, "t": 40, "b": 0},
         clickmode="event+select"  # Allow click events
     )
 

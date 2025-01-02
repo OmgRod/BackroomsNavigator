@@ -1,6 +1,10 @@
+"""
+Dash application setup and callbacks for the Backrooms Navigator.
+"""
+
+import webbrowser
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
-import webbrowser
 from graph import create_graph, create_plotly_figure
 
 # Create the graph and Plotly figure
@@ -45,13 +49,15 @@ app.layout = html.Div([
     Output('graph', 'figure'),
     Input('graph', 'clickData')
 )
-def display_click_data(clickData):
-    if clickData:
-        point = clickData['points'][0]
+def display_click_data(click_data):
+    """Handle click events on the graph."""
+    if click_data:
+        point = click_data['points'][0]
         url = point['customdata']
         if url:
             webbrowser.open(url)
     return fig  # Return the figure to avoid updating the clickData
 
 def run_app():
+    """Run the Dash application."""
     app.run_server(debug=True)
