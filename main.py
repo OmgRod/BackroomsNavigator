@@ -1,6 +1,9 @@
 import pandas as pd
 import plotly.graph_objects as go
 import networkx as nx
+from dash import Dash, dcc, html
+from dash.dependencies import Input, Output
+import webbrowser
 
 # Step 1: Read the CSV file using Pandas
 data = pd.read_csv('levels.csv')
@@ -124,7 +127,7 @@ fig.add_trace(go.Scatter(
 ))
 
 # Add nodes to the plot with adjusted text and hover info
-fig.add_trace(go.Scatter(
+scatter = go.Scatter(
     x=node_x, y=node_y,
     mode='markers+text',
     marker=dict(
@@ -145,7 +148,8 @@ fig.add_trace(go.Scatter(
     hovertext=hover_text,  # Specify the hover text separately
     customdata=urls,  # Store the URL data for each node
     line=dict(width=2, color='black')
-))
+)
+fig.add_trace(scatter)
 
 # Step 6: Add click event handler in layout
 fig.update_layout(
@@ -160,17 +164,24 @@ fig.update_layout(
     clickmode="event+select"  # Allow click events
 )
 
-# Add a JavaScript callback to open URL when a node is clicked
-fig.update_traces(
-    marker=dict(size=10),
-    textposition="top center",
-    hoverinfo='text',
-    hovertext=hover_text,
-    customdata=urls,  # Store URLs in customdata
+# Step 7: Create Dash app
+app = Dash(__name__)
+
+app.layout = html.Div([
+    dcc.Graph(id='graph', figure=fig, style={'height': '100vh'})
+], style={'height': '100vh'})
+
+@app.callback(
+    Output('graph', 'clickData'),
+    Input('graph', 'clickData')
 )
+def display_click_data(clickData):
+    if clickData:
+        point = clickData['points'][0]
+        url = point['customdata']
+        if url:
+            webbrowser.open(url)
+    return None  # Return None to avoid updating the clickData
 
-# Adding a custom callback for clicking on nodes
-fig.write_html("index.html", auto_open=True)
-
-# Show plot in notebook (optional)
-fig.show()
+if __name__ == '__main__':
+    app.run_server(debug=True)
