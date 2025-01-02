@@ -13,7 +13,7 @@ defined_nodes = set()  # Track the nodes that are already defined in the 'id' fi
 
 for _, row in data.iterrows():
     # Add nodes with 'id', 'label' (name), and 'difficulty'
-    G.add_node(row['id'], label=row['name'], difficulty=row['difficulty'])
+    G.add_node(row['id'], label=row['name'], difficulty=row['difficulty'], url=row['url'])
     defined_nodes.add(row['id'])  # Mark the level as defined
 
     # Combine entrances and exits into one list (both can form connections)
@@ -71,6 +71,7 @@ node_text = []
 hover_text = []
 node_color = []
 valid_difficulties = []  # List to store valid difficulty values
+urls = []  # List to store URLs for each node
 
 for node in G.nodes():
     x, y = pos[node]
@@ -87,6 +88,7 @@ for node in G.nodes():
         node_color.append("green")
         node_text.append(f"{node_label}")
         hover_text.append(f"(Undefined Level)<br>Difficulty: N/A")  # Add specific hover text for undefined levels
+        urls.append("")  # No URL for undefined levels
     else:
         node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name
 
@@ -108,6 +110,7 @@ for node in G.nodes():
 
             # Add the difficulty number to the node text
             # node_text[-1] += f"<br>Difficulty: {difficulty}"
+        urls.append(G.nodes[node].get('url', ""))  # Store the URL
 
 # Step 5: Plot using Plotly for interactive map
 fig = go.Figure()
@@ -129,7 +132,7 @@ fig.add_trace(go.Scatter(
         color=node_color,
         cmin=min(valid_difficulties, default=0),  # Minimum value for the colorscale
         cmax=max(valid_difficulties, default=5),  # Maximum value for the colorscale
-        colorscale=[
+        colorscale=[ 
             [0, "blue"],  # Difficulty 0: blue
             [0.5, "#FFA07A"],  # Mid-range (2.5): light salmon
             [1, "red"]  # Difficulty 5: dark-ish red
@@ -139,10 +142,12 @@ fig.add_trace(go.Scatter(
     text=node_text,  # Show ID and name below the node
     textposition="top center",
     hoverinfo='text',  # Show only hover text
-    hovertext=hover_text  # Specify the hover text separately
+    hovertext=hover_text,  # Specify the hover text separately
+    customdata=urls,  # Store the URL data for each node
+    line=dict(width=2, color='black')
 ))
 
-# Step 6: Layout settings for zoom and dragging
+# Step 6: Add click event handler in layout
 fig.update_layout(
     title="Backrooms Map",
     showlegend=False,
@@ -152,10 +157,20 @@ fig.update_layout(
     dragmode="zoom",  # Allow zoom and drag
     autosize=True,
     margin=dict(l=0, r=0, t=40, b=0),
+    clickmode="event+select"  # Allow click events
 )
 
-# Step 7: Export to HTML file to view in the browser
-fig.write_html("index.html")
+# Add a JavaScript callback to open URL when a node is clicked
+fig.update_traces(
+    marker=dict(size=10),
+    textposition="top center",
+    hoverinfo='text',
+    hovertext=hover_text,
+    customdata=urls,  # Store URLs in customdata
+)
+
+# Adding a custom callback for clicking on nodes
+fig.write_html("index.html", auto_open=True)
 
 # Show plot in notebook (optional)
 fig.show()
