@@ -5,6 +5,7 @@ Dash application setup and callbacks for the Backrooms Navigator.
 import webbrowser
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
+from flask import request
 from graph import create_graph, create_plotly_figure
 
 # Create the graph and Plotly figure
@@ -13,6 +14,7 @@ fig = create_plotly_figure(G, pos, defined_nodes)
 
 # Create Dash app
 app = Dash(__name__)
+server = app.server
 
 # Add custom CSS to hide the Dash button
 app.index_string = '''
@@ -57,6 +59,15 @@ def display_click_data(click_data):
         if url:
             webbrowser.open(url)
     return fig  # Return the figure to avoid updating the clickData
+
+@server.route('/shutdown', methods=['POST'])
+def shutdown():
+    """Shutdown the Flask server."""
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    func()
+    return 'Server shutting down...'
 
 def run_app():
     """Run the Dash application."""
