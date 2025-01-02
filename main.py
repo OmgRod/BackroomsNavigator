@@ -86,7 +86,7 @@ for node in G.nodes():
         # If the node is not defined, it should be marked as green
         node_color.append("green")
         node_text.append(f"{node_label}")
-        hover_text.append(f"Difficulty: N/A")  # Add specific hover text for undefined levels
+        hover_text.append(f"(Undefined Level)<br>Difficulty: N/A")  # Add specific hover text for undefined levels
     else:
         node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name
 
@@ -107,7 +107,7 @@ for node in G.nodes():
             valid_difficulties.append(difficulty)  # Add to valid difficulties for the scale
 
             # Add the difficulty number to the node text
-            node_text[-1] += f"<br>Difficulty: {difficulty}"
+            # node_text[-1] += f"<br>Difficulty: {difficulty}"
 
 # Step 5: Plot using Plotly for interactive map
 fig = go.Figure()
