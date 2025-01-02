@@ -107,6 +107,9 @@ def create_plotly_figure(graph, pos, defined_nodes):
             if node_difficulty == "?":
                 hover_text.append("Difficulty: Undetermined")
                 node_color.append("black")  # Set color to black for undetermined difficulty
+            elif node_difficulty == "TRANSLATION_ERROR":
+                hover_text.append("Difficulty: TRANSLATION_ERROR")
+                node_color.append("orange")  # Set color to orange for translation error
             else:
                 hover_text.append(f"Difficulty: {node_difficulty}")
                 # Ensure node_difficulty is treated as a string for the isdigit check
