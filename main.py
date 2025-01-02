@@ -67,6 +67,7 @@ node_y = []
 node_text = []
 hover_text = []
 node_color = []
+valid_difficulties = []  # List to store valid difficulty values
 
 for node in G.nodes():
     x, y = pos[node]
@@ -78,13 +79,21 @@ for node in G.nodes():
     node_id = node  # Assume 'node' itself is the ID
     node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name below
 
-    # Hover text with difficulty only
+    # Check if difficulty is "?" and update hover text accordingly
     node_difficulty = G.nodes[node].get('difficulty', 'N/A')
-    hover_text.append(f"Difficulty: {node_difficulty}")
-
-    # Node color based on difficulty
-    difficulty = G.nodes[node].get('difficulty', 0)
-    node_color.append(difficulty)
+    if node_difficulty == "?":
+        hover_text.append("Difficulty: Undetermined")
+        node_color.append("black")  # Set color to black for undetermined difficulty
+    else:
+        hover_text.append(f"Difficulty: {node_difficulty}")
+        # Ensure node_difficulty is treated as a string for the isdigit check
+        if isinstance(node_difficulty, str) and node_difficulty.isdigit():
+            difficulty = int(node_difficulty)
+        else:
+            difficulty = int(node_difficulty) if isinstance(node_difficulty, int) else 0
+        
+        node_color.append(difficulty)
+        valid_difficulties.append(difficulty)  # Add to valid difficulties for the scale
 
 # Step 5: Plot using Plotly for interactive map
 fig = go.Figure()
@@ -104,8 +113,8 @@ fig.add_trace(go.Scatter(
     marker=dict(
         size=10,
         color=node_color,
-        cmin=0,  # Minimum value for the colorscale
-        cmax=5,  # Maximum value for the colorscale
+        cmin=min(valid_difficulties, default=0),  # Minimum value for the colorscale
+        cmax=max(valid_difficulties, default=5),  # Maximum value for the colorscale
         colorscale=[
             [0, "blue"],  # Difficulty 0: blue
             [0.5, "#FFA07A"],  # Mid-range (2.5): light salmon
