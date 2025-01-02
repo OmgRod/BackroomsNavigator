@@ -1,3 +1,7 @@
+"""
+Main entry point for the Backrooms Navigator application.
+"""
+
 import threading
 import time
 import os
@@ -5,14 +9,14 @@ from app import run_app
 from graph import create_graph, create_plotly_figure
 
 # Variable to control whether the server should close after generating the HTML file
-CLOSE_SERVER_AFTER_GENERATION = False
+CLOSE_SERVER_AFTER_GENERATION = True
 
 # Create the graph and Plotly figure
 G, pos, defined_nodes = create_graph()
 fig = create_plotly_figure(G, pos, defined_nodes)
 
 # Save the Plotly figure as an HTML file
-fig.write_html('index.html')
+fig.write_html('backrooms_map.html')
 
 if __name__ == '__main__':
     if CLOSE_SERVER_AFTER_GENERATION:
