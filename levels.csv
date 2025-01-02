@@ -14,3 +14,6 @@ Level 11,The Endless City,1,"Level 9;The Metro;Level 11.1;Level 17;Level 25;Leve
 Level 12,Matrix,0,"Level 11","Level -1;Level 1;Level 4;Level 10;Level 19;Level 23;Level 34"
 Level 13,The Infinite Apartments,2,"Level 11;Level 12;Level -2","Level -1;Level 14;Level 3;Level -5"
 Level 14,The Military Hospital,3,"Level -2","Level -2"
+Level 15,Futuristic Halls,1,"Level 3","."
+Level 16,The Mental Asylum,1,"Level 14","."
+Level 17,The Carrier,1,"Level 7","Level 11;Level 7;Level 18"

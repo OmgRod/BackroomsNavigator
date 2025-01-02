@@ -22,6 +22,9 @@ for _, row in data.iterrows():
 
     # Add edges for each entrance/exit connection
     for connection in connections:
+        connection = connection.strip()  # Remove any leading/trailing whitespace
+        if connection == "." or connection == "":  # Skip invalid or empty connections
+            continue
         try:
             # Handle both types of connection (entrance or exit) as integer node IDs
             connection_id = str(connection)
