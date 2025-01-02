@@ -30,7 +30,22 @@ for _, row in data.iterrows():
             continue  # Skip non-numeric connections (e.g., names)
 
 # Step 3: Generate the position of each node in the graph
-pos = nx.spring_layout(G, seed=42, k=0.5)  # Increased k for better spacing of nodes
+# Use spring_layout for natural clustering and set positions
+pos = nx.spring_layout(G, seed=42, k=0.5, iterations=200)
+
+# Adjust positions to stretch y-axis and keep connected nodes close
+scale_x = 1.5  # Moderate horizontal spread
+scale_y = 3.0  # Significant vertical spread
+for node in pos:
+    pos[node] = (pos[node][0] * scale_x, pos[node][1] * scale_y)
+
+# Manually adjust positions for specific nodes
+for node in G.nodes():
+    node_label = G.nodes[node].get('label', '')
+    if node_label == "Level 0":
+        pos[node] = (0, -5)  # Place Level 0 at the bottom
+    elif node_label == "The Frontrooms":
+        pos[node] = (0, 5)  # Place The Frontrooms at the top
 
 # Step 4: Prepare data for Plotly (nodes and edges)
 edge_x = []
@@ -65,7 +80,8 @@ for node in G.nodes():
     hover_text.append(f"Difficulty: {node_difficulty}")
 
     # Node color based on difficulty
-    node_color.append(G.nodes[node].get('difficulty', 1))
+    difficulty = G.nodes[node].get('difficulty', 0)
+    node_color.append(difficulty)
 
 # Step 5: Plot using Plotly for interactive map
 fig = go.Figure()
@@ -85,7 +101,13 @@ fig.add_trace(go.Scatter(
     marker=dict(
         size=10,
         color=node_color,
-        colorscale='Viridis',
+        cmin=0,  # Minimum value for the colorscale
+        cmax=5,  # Maximum value for the colorscale
+        colorscale=[
+            [0, "blue"],  # Difficulty 0: blue
+            [0.5, "#FFA07A"],  # Mid-range (2.5): light salmon
+            [1, "red"]  # Difficulty 5: dark-ish red
+        ],
         colorbar=dict(title='Difficulty')
     ),
     text=node_text,  # Show ID and name below the node
