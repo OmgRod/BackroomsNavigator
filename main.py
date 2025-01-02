@@ -9,9 +9,12 @@ data = pd.read_csv('levels.csv')
 G = nx.Graph()
 
 # Add nodes and edges based on both entrances and exits
+defined_nodes = set()  # Track the nodes that are already defined in the 'id' field
+
 for _, row in data.iterrows():
     # Add nodes with 'id', 'label' (name), and 'difficulty'
     G.add_node(row['id'], label=row['name'], difficulty=row['difficulty'])
+    defined_nodes.add(row['id'])  # Mark the level as defined
 
     # Combine entrances and exits into one list (both can form connections)
     entrances = row['entrances'].split(';')
@@ -77,23 +80,34 @@ for node in G.nodes():
     # Node label for display below the ID
     node_label = G.nodes[node].get('label', f'{node}')
     node_id = node  # Assume 'node' itself is the ID
-    node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name below
 
-    # Check if difficulty is "?" and update hover text accordingly
-    node_difficulty = G.nodes[node].get('difficulty', 'N/A')
-    if node_difficulty == "?":
-        hover_text.append("Difficulty: Undetermined")
-        node_color.append("black")  # Set color to black for undetermined difficulty
+    # Check if the node is defined (i.e., in the 'id' column)
+    if node not in defined_nodes:
+        # If the node is not defined, it should be marked as green
+        node_color.append("green")
+        node_text.append(f"{node_label}")
+        hover_text.append(f"Difficulty: N/A")  # Add specific hover text for undefined levels
     else:
-        hover_text.append(f"Difficulty: {node_difficulty}")
-        # Ensure node_difficulty is treated as a string for the isdigit check
-        if isinstance(node_difficulty, str) and node_difficulty.isdigit():
-            difficulty = int(node_difficulty)
+        node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name
+
+        # Check if difficulty is "?" and update hover text accordingly
+        node_difficulty = G.nodes[node].get('difficulty', 'N/A')
+        if node_difficulty == "?":
+            hover_text.append("Difficulty: Undetermined")
+            node_color.append("black")  # Set color to black for undetermined difficulty
         else:
-            difficulty = int(node_difficulty) if isinstance(node_difficulty, int) else 0
-        
-        node_color.append(difficulty)
-        valid_difficulties.append(difficulty)  # Add to valid difficulties for the scale
+            hover_text.append(f"Difficulty: {node_difficulty}")
+            # Ensure node_difficulty is treated as a string for the isdigit check
+            if isinstance(node_difficulty, str) and node_difficulty.isdigit():
+                difficulty = int(node_difficulty)
+            else:
+                difficulty = int(node_difficulty) if isinstance(node_difficulty, int) else 0
+
+            node_color.append(difficulty)  # Add difficulty-based color
+            valid_difficulties.append(difficulty)  # Add to valid difficulties for the scale
+
+            # Add the difficulty number to the node text
+            node_text[-1] += f"<br>Difficulty: {difficulty}"
 
 # Step 5: Plot using Plotly for interactive map
 fig = go.Figure()
