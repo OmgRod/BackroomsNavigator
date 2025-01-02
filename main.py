@@ -43,22 +43,28 @@ for edge in G.edges():
     edge_y.append(y0)
     edge_y.append(y1)
 
-# Create a scatter plot for the nodes
+# Prepare data for the nodes
 node_x = []
 node_y = []
 node_text = []
+hover_text = []
 node_color = []
+
 for node in G.nodes():
     x, y = pos[node]
     node_x.append(x)
     node_y.append(y)
 
-    # Prepare the node text with name and difficulty
+    # Node label for display below the ID
     node_label = G.nodes[node].get('label', f'{node}')
-    node_difficulty = G.nodes[node].get('difficulty', 'N/A')
-    node_text.append(f"{node_label}<br>Difficulty: {node_difficulty}")
+    node_id = node  # Assume 'node' itself is the ID
+    node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name below
 
-    # Color nodes based on difficulty (lighter color for easier levels)
+    # Hover text with difficulty only
+    node_difficulty = G.nodes[node].get('difficulty', 'N/A')
+    hover_text.append(f"Difficulty: {node_difficulty}")
+
+    # Node color based on difficulty
     node_color.append(G.nodes[node].get('difficulty', 1))
 
 # Step 5: Plot using Plotly for interactive map
@@ -72,14 +78,20 @@ fig.add_trace(go.Scatter(
     hoverinfo='none'
 ))
 
-# Add nodes to the plot with color and text
+# Add nodes to the plot with adjusted text and hover info
 fig.add_trace(go.Scatter(
     x=node_x, y=node_y,
     mode='markers+text',
-    marker=dict(size=10, color=node_color, colorscale='Viridis', colorbar=dict(title='Difficulty')),
-    text=node_text,
+    marker=dict(
+        size=10,
+        color=node_color,
+        colorscale='Viridis',
+        colorbar=dict(title='Difficulty')
+    ),
+    text=node_text,  # Show ID and name below the node
     textposition="top center",
-    hoverinfo='text'
+    hoverinfo='text',  # Show only hover text
+    hovertext=hover_text  # Specify the hover text separately
 ))
 
 # Step 6: Layout settings for zoom and dragging
@@ -95,7 +107,7 @@ fig.update_layout(
 )
 
 # Step 7: Export to HTML file to view in the browser
-fig.write_html("backrooms_map.html")
+fig.write_html("index.html")
 
 # Show plot in notebook (optional)
 fig.show()
