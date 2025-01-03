@@ -102,31 +102,30 @@ def create_plotly_figure(graph, pos, defined_nodes):
         else:
             node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name
 
-            # Check if difficulty is "?" and update hover text accordingly
             node_difficulty = graph.nodes[node].get('difficulty', 'N/A')
             if node_difficulty == "?":
                 hover_text.append("Difficulty: Undetermined")
-                node_color.append("black")  # Set color to black for undetermined difficulty
+                node_color.append("black")
+            elif node_difficulty == "var":
+                hover_text.append("Difficulty: Variable")
+                node_color.append("black")
             elif node_difficulty == "TRANSLATION_ERROR":
                 hover_text.append("Difficulty: TRANSLATION_ERROR")
-                node_color.append("orange")  # Set color to orange for translation error
+                node_color.append("orange")
             elif node_difficulty == "∫":
                 hover_text.append("Difficulty: Integral")
                 node_color.append("#bedff0")
             else:
                 hover_text.append(f"Difficulty: {node_difficulty}")
-                # Ensure node_difficulty is treated as a string for the isdigit check
                 if isinstance(node_difficulty, str) and node_difficulty.isdigit():
                     difficulty = int(node_difficulty)
                 else:
                     difficulty = int(node_difficulty) if isinstance(node_difficulty, int) else 0
 
-                node_color.append(difficulty)  # Add difficulty-based color
-                valid_difficulties.append(difficulty)  # Add to valid difficulties for the scale
+                node_color.append(difficulty)
+                valid_difficulties.append(difficulty)
 
-                # Add the difficulty number to the node text
-                # node_text[-1] += f"<br>Difficulty: {difficulty}"
-            urls.append(graph.nodes[node].get('url', ""))  # Store the URL
+            urls.append(graph.nodes[node].get('url', ""))
 
     # Step 5: Plot using Plotly for interactive map
     fig = go.Figure()
