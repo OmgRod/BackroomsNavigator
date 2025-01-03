@@ -56,6 +56,24 @@ app.layout = html.Div([
             ],
             value=['normal', 'negative', 'sub', 'anomalous'],
             labelStyle={'display': 'block'}
+        ),
+        html.H2("Difficulty"),
+        dcc.Dropdown(
+            id='difficulty-filter',
+            options=[
+                {'label': 'Undetermined', 'value': '?'},
+                {'label': 'Variable', 'value': 'var'},
+                {'label': 'Translation Error', 'value': 'TRANSLATION_ERROR'},
+                {'label': 'Integral', 'value': '∫'},
+                {'label': '0', 'value': '0'},
+                {'label': '1', 'value': '1'},
+                {'label': '2', 'value': '2'},
+                {'label': '3', 'value': '3'},
+                {'label': '4', 'value': '4'},
+                {'label': '5', 'value': '5'}
+            ],
+            value=['?', 'var', 'TRANSLATION_ERROR', '∫', '0', '1', '2', '3', '4', '5'],
+            multi=True
         )
     ], style={'width': '20%', 'display': 'inline-block', 'verticalAlign': 'top', 'padding': '20px'}),
     html.Div([
@@ -66,11 +84,12 @@ app.layout = html.Div([
 @app.callback(
     Output('graph', 'figure'),
     [Input('graph', 'clickData'),
-     Input('level-type-filter', 'value')]
+     Input('level-type-filter', 'value'),
+     Input('difficulty-filter', 'value')]
 )
-def update_graph(click_data, selected_types):
-    """Update the graph based on click events and selected level types."""
-    filtered_graph = filter_graph(G, selected_types)
+def update_graph(click_data, selected_types, selected_difficulties):
+    """Update the graph based on click events and selected level types and difficulties."""
+    filtered_graph = filter_graph(G, selected_types, selected_difficulties)
     filtered_fig = create_plotly_figure(filtered_graph, pos, defined_nodes)
     if click_data:
         point = click_data['points'][0]

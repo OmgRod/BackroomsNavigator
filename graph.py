@@ -61,12 +61,13 @@ def create_graph():
 
     return graph, pos, defined_nodes
 
-def filter_graph(graph, selected_types):
-    """Filter the graph based on the selected level types."""
+def filter_graph(graph, selected_types, selected_difficulties):
+    """Filter the graph based on the selected level types and difficulties."""
     filtered_graph = graph.copy()
     for node in list(graph.nodes):
         lvltype = str(graph.nodes[node].get('lvltype', ''))
-        if not any(lvltype_type in selected_types for lvltype_type in lvltype.split(';')):
+        difficulty = str(graph.nodes[node].get('difficulty', ''))
+        if not any(lvltype_type in selected_types for lvltype_type in lvltype.split(';')) or difficulty not in selected_difficulties:
             filtered_graph.remove_node(node)
     return filtered_graph
 
