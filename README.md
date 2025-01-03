@@ -35,7 +35,7 @@ pip install -r requirements.txt
 py main.py
 ```
 
-> Once entered, the following should show up:
+Once entered, the following should show up:
 
 ```
 Dash is running on http://127.0.0.1:8050/
