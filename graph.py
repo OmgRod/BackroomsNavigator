@@ -198,8 +198,7 @@ def create_plotly_figure(graph, pos, defined_nodes):
         dragmode="zoom",  # Allow zoom and drag
         autosize=True,
         margin={"l": 0, "r": 0, "t": 40, "b": 0},
-        clickmode="event+select",  # Allow click events
-        scrollZoom=True  # Enable scroll zoom
+        clickmode="event+select"
     )
 
     return fig

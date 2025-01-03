@@ -116,7 +116,7 @@ app.layout = html.Div([
         html.Button('Update Graph', id='update-graph', n_clicks=0)
     ], style={'width': '20%', 'display': 'inline-block', 'verticalAlign': 'top', 'padding': '20px', 'height': '100vh', 'overflowY': 'auto'}),
     html.Div([
-        dcc.Graph(id='graph', figure=fig, style={'height': '100vh'})
+        dcc.Graph(id='graph', figure=fig, style={'height': '100vh'}, config={'scrollZoom': True})
     ], style={'width': '75%', 'display': 'inline-block', 'verticalAlign': 'top', 'height': '100vh'})
 ], style={'height': '100vh', 'overflow': 'hidden'})
 
