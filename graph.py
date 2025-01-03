@@ -19,7 +19,7 @@ def create_graph():
 
     for _, row in data.iterrows():
         # Add nodes with 'id', 'label' (name), and 'difficulty'
-        graph.add_node(row['id'], label=row['name'], difficulty=row['difficulty'], url=row['url'])
+        graph.add_node(row['id'], label=row['name'], difficulty=row['difficulty'], url=row['url'], lvltype=row['lvltype'])
         defined_nodes.add(row['id'])  # Mark the level as defined
 
         # Combine entrances and exits into one list (both can form connections)
@@ -60,6 +60,15 @@ def create_graph():
             pos[node] = (0, 5)  # Place The Frontrooms at the top
 
     return graph, pos, defined_nodes
+
+def filter_graph(graph, selected_types):
+    """Filter the graph based on the selected level types."""
+    filtered_graph = graph.copy()
+    for node in list(graph.nodes):
+        lvltype = str(graph.nodes[node].get('lvltype', ''))
+        if not any(lvltype_type in selected_types for lvltype_type in lvltype.split(';')):
+            filtered_graph.remove_node(node)
+    return filtered_graph
 
 def create_plotly_figure(graph, pos, defined_nodes):
     """Create the Plotly figure for the graph."""
