@@ -61,14 +61,26 @@ def create_graph():
 
     return graph, pos, defined_nodes
 
+def filter_graph_by_level(graph, current_level):
+    """Filter the graph to show only the current level and its exits."""
+    filtered_graph = nx.Graph()
+    if current_level in graph.nodes:
+        filtered_graph.add_node(current_level, **graph.nodes[current_level])
+        for neighbor in graph.neighbors(current_level):
+            filtered_graph.add_node(neighbor, **graph.nodes[neighbor])
+            filtered_graph.add_edge(current_level, neighbor)
+    return filtered_graph
+
 def filter_graph(graph, selected_types, selected_difficulties):
-    """Filter the graph based on the selected level types and difficulties."""
-    filtered_graph = graph.copy()
-    for node in list(graph.nodes):
-        lvltype = str(graph.nodes[node].get('lvltype', ''))
-        difficulty = str(graph.nodes[node].get('difficulty', ''))
-        if not any(lvltype_type in selected_types for lvltype_type in lvltype.split(';')) or difficulty not in selected_difficulties:
-            filtered_graph.remove_node(node)
+    """Filter the graph based on selected level types and difficulties."""
+    filtered_graph = nx.Graph()
+    for node in graph.nodes():
+        node_data = graph.nodes[node]
+        if node_data.get('lvltype') in selected_types and node_data.get('difficulty') in selected_difficulties:
+            filtered_graph.add_node(node, **node_data)
+            for neighbor in graph.neighbors(node):
+                if neighbor in filtered_graph.nodes:
+                    filtered_graph.add_edge(node, neighbor)
     return filtered_graph
 
 def create_plotly_figure(graph, pos, defined_nodes):
@@ -186,7 +198,28 @@ def create_plotly_figure(graph, pos, defined_nodes):
         dragmode="zoom",  # Allow zoom and drag
         autosize=True,
         margin={"l": 0, "r": 0, "t": 40, "b": 0},
-        clickmode="event+select"  # Allow click events
+        clickmode="event+select",  # Allow click events
+        scrollZoom=True  # Enable scroll zoom
     )
 
     return fig
+
+def find_best_exit(graph, current_level, max_difficulty, include_variable, max_entity_count):
+    """Find the best exit based on the criteria."""
+    best_exit = None
+    best_score = float('inf')
+    for neighbor in graph.neighbors(current_level):
+        neighbor_data = graph.nodes[neighbor]
+        difficulty = neighbor_data.get('difficulty', 'N/A')
+        if difficulty == '?':
+            difficulty = float('inf') if not include_variable else max_difficulty
+        elif difficulty == 'var':
+            difficulty = max_difficulty if include_variable else float('inf')
+        else:
+            difficulty = int(difficulty)
+        entity_count = neighbor_data.get('entity_count', 0)
+        score = difficulty + entity_count
+        if score < best_score and difficulty <= max_difficulty and entity_count <= max_entity_count:
+            best_score = score
+            best_exit = neighbor
+    return best_exit
