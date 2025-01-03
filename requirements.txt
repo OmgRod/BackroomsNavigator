@@ -6,3 +6,4 @@ networkx
 dash
 pytest
 pylint
+flask
