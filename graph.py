@@ -100,7 +100,10 @@ def create_plotly_figure(graph, pos, defined_nodes):
             hover_text.append("(Undefined Level)<br>Difficulty: N/A")
             urls.append("")  # No URL for undefined levels
         else:
-            node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name
+            if node_id == node_label:
+                node_text.append(f"{node_id}")  # Display only ID if ID and name are the same
+            else:
+                node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name
 
             node_difficulty = graph.nodes[node].get('difficulty', 'N/A')
             if node_difficulty == "?":
