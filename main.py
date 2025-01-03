@@ -9,6 +9,8 @@ import requests
 from app import run_app
 from graph import create_graph, create_plotly_figure
 
+os.environ["PORT"] = "8050"
+
 # Variable to control whether the server should close after generating the HTML file
 CLOSE_SERVER_AFTER_GENERATION = False
 
