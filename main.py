@@ -29,6 +29,6 @@ if __name__ == '__main__':
         time.sleep(5)
 
         # Make a request to the shutdown route to stop the server
-        requests.post('http://127.0.0.1:10000/shutdown')
+        requests.post('http://127.0.0.1:8050/shutdown')
     else:
         run_app()
