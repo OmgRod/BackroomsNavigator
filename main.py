@@ -30,10 +30,11 @@ def run_app():
 def main():
     parser = argparse.ArgumentParser(description="Backrooms Navigator CLI")
     parser.add_argument('command', nargs='?', default='run', choices=['run', 'gen'], help="Command to run")
+    parser.add_argument('--show-green-nodes', action='store_true', help="Show green nodes in the generated HTML files")
     args = parser.parse_args()
 
     if args.command == 'gen':
-        generate_html_files()
+        generate_html_files(show_green_nodes=args.show_green_nodes)
         print("HTML files generated.")
     else:
         run_app()
