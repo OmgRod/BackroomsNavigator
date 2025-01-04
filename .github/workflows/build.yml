@@ -27,10 +27,14 @@ jobs:
         pip install -r requirements.txt
 
     - name: Generate HTML files
-      run: python main.py gen
+      run: |
+        mkdir -p public
+        python main.py gen
+        mv index_*.html public/
+        mv index.html public/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # The directory to deploy, change if needed
+        publish_dir: ./public  # The directory to deploy
