@@ -18,7 +18,7 @@ def create_graph():
     defined_nodes = set()  # Track the nodes that are already defined in the 'id' field
 
     for _, row in data.iterrows():
-        # Add nodes with 'id', 'label' (name), and 'difficulty'
+        # Add nodes with 'id', 'label' (name), 'difficulty', and 'lvltype'
         graph.add_node(row['id'], label=row['name'], difficulty=row['difficulty'], url=row['url'], lvltype=row['lvltype'])
         defined_nodes.add(row['id'])  # Mark the level as defined
 
