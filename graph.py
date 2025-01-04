@@ -54,6 +54,12 @@ def create_graph(csv_file):
 
     return graph, pos, defined_nodes
 
+def get_unique_difficulties(csv_file):
+    """Extract unique difficulties from the CSV file."""
+    data = pd.read_csv(csv_file)
+    difficulties = set(data['difficulty'].dropna().unique())
+    return difficulties
+
 def filter_graph_by_level(graph, current_level):
     """Filter the graph to show only the current level and its exits."""
     filtered_graph = nx.Graph()
@@ -69,12 +75,14 @@ def filter_graph(graph, selected_types, selected_difficulties, show_green_nodes=
     filtered_graph = nx.Graph()
     for node in graph.nodes():
         node_data = graph.nodes[node]
-        if node_data.get('lvltype') in selected_types and node_data.get('difficulty') in selected_difficulties:
+        lvltype = node_data.get('lvltype', 'undefined')
+        difficulty = node_data.get('difficulty', 'N/A')
+        if lvltype in selected_types and difficulty in selected_difficulties:
             filtered_graph.add_node(node, **node_data)
             for neighbor in graph.neighbors(node):
                 if neighbor in filtered_graph.nodes:
                     filtered_graph.add_edge(node, neighbor)
-        elif node_data.get('lvltype') == 'undefined' and show_green_nodes:
+        elif show_green_nodes and lvltype == 'undefined':
             filtered_graph.add_node(node, **node_data)
             for neighbor in graph.neighbors(node):
                 if neighbor in filtered_graph.nodes:

@@ -99,8 +99,12 @@ app.layout = html.Div([
                 {'label': '4', 'value': '4'},
                 {'label': '5', 'value': '5'},
                 {'label': '10e', 'value': '10e'},
+                {'label': 'Run', 'value': '!'},
+                {'label': 'Xi', 'value': 'ξ'},
+                {'label': 'Traumatellix', 'value': 'traumatellix'},
+                {'label': '-2', 'value': '-2'},
             ],
-            value=['?', 'var', 'TRANSLATION_ERROR', '∫', 'N/A', '0', '1', '2', '3', '4', '5'],
+            value=['?', 'var', 'TRANSLATION_ERROR', '∫', 'N/A', '0', '1', '2', '3', '4', '5', '10e', '!', 'ξ', 'traumatellix', '-2'],
             multi=True
         ),
         html.H2("Options"),

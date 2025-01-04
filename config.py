@@ -13,7 +13,12 @@ class Config:
         '∫': 'Integral',
         '10e': '10e - Environmental',
         'Ω': 'Omega - Livable',
-        'N/A': 'N/A'
+        'N/A': 'N/A',
+        'deadzone': 'Deadzone',
+        '!': 'Run',
+        'ξ': 'Xi',
+        'traumatellix': 'Traumatellix',
+        '-2': '-2',
     }
 
     DIFFICULTY_COLORS = {
@@ -23,5 +28,10 @@ class Config:
         '∫': '#bedff0',
         '10e': 'red',
         'Ω': 'purple',
-        'N/A': 'green'
+        'N/A': 'green',
+        'deadzone': 'black',
+        '!': 'red',
+        'ξ': 'red,',
+        'traumatellix': 'red',
+        '-2': '#5bb792',
     }
