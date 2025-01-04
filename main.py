@@ -20,7 +20,7 @@ def generate_html_files(show_green_nodes=True):
         html_content = fig.to_html(full_html=False, include_plotlyjs='cdn')
         html_template = HTMLTemplates.generate_html_template(name, html_content)
 
-        with open(f'index_{csv_file.split(".")[0]}.html', 'w', encoding='utf-8') as f:
+        with open(f'{csv_file.split(".")[0]}.html', 'w', encoding='utf-8') as f:
             f.write(html_template)
 
 def run_app():
