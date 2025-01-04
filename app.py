@@ -28,7 +28,7 @@ app.index_string = '''
         {%css%}
         <meta property="og:title" content="Backrooms Navigator">
         <meta property="og:description" content="Look at a map of all the levels of the Backrooms and find your way out!">
-        <meta property="og:image" content="/assets/promo.png">
+        <meta property="og:image" content="https://omgrod.me/BackroomsNavigator/assets/promo.png">
         <meta property="og:type" content="website">
         <style>
             /* Hide the Dash button */
