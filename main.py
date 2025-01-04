@@ -6,65 +6,37 @@ import threading
 import time
 import os
 import requests
-from app import run_app
+import argparse
 from graph import create_graph, create_plotly_figure
+from templates import HTMLTemplates
+from config import Config
 
 os.environ["PORT"] = "8050"
 
-# Variable to control whether the server should close after generating the HTML file
-CLOSE_SERVER_AFTER_GENERATION = False
+def generate_html_files(show_green_nodes=True):
+    for csv_file, name in Config.CSV_FILES.items():
+        G, pos, defined_nodes = create_graph(f'data/{csv_file}')
+        fig = create_plotly_figure(G, pos, defined_nodes, show_green_nodes=show_green_nodes)
+        html_content = fig.to_html(full_html=False, include_plotlyjs='cdn')
+        html_template = HTMLTemplates.generate_html_template(name, html_content)
 
-# Create the graph and Plotly figure
-G, pos, defined_nodes = create_graph()
-fig = create_plotly_figure(G, pos, defined_nodes)
+        with open(f'index_{csv_file.split(".")[0]}.html', 'w', encoding='utf-8') as f:
+            f.write(html_template)
 
-# Save the Plotly figure as an HTML file
-html_content = fig.to_html(full_html=False, include_plotlyjs='cdn')
+def run_app():
+    from app import app
+    app.run_server(debug=True)
 
-# Add Open Graph meta tags and custom CSS to ensure the graph takes up the full screen
-html_content = f'''
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Backrooms Navigator</title>
-        <meta property="og:title" content="Backrooms Navigator">
-        <meta property="og:description" content="Navigate through the mysterious levels of the Backrooms.">
-        <meta property="og:image" content="/assets/promo.png">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="http://localhost:8050">
-        <style>
-            html, body {{
-                height: 100%;
-                margin: 0;
-                overflow: hidden;
-            }}
-            #graph > div {{
-                height: 100%;
-                width: 100%;
-                position: absolute;
-            }}
-        </style>
-    </head>
-    <body>
-        <div id="graph">{html_content}</div>
-    </body>
-</html>
-'''
+def main():
+    parser = argparse.ArgumentParser(description="Backrooms Navigator CLI")
+    parser.add_argument('command', nargs='?', default='run', choices=['run', 'gen'], help="Command to run")
+    args = parser.parse_args()
 
-with open('index.html', 'w', encoding='utf-8') as f:
-    f.write(html_content)
-
-if __name__ == '__main__':
-    if CLOSE_SERVER_AFTER_GENERATION:
-        # Run the server in a separate thread
-        server_thread = threading.Thread(target=run_app)
-        server_thread.start()
-
-        # Wait for a short period to ensure the server starts
-        time.sleep(5)
-
-        # Make a request to the shutdown route to stop the server
-        requests.post('http://127.0.0.1:8050/shutdown')
+    if args.command == 'gen':
+        generate_html_files()
+        print("HTML files generated.")
     else:
         run_app()
+
+if __name__ == '__main__':
+    main()

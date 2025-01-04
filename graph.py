@@ -5,11 +5,12 @@ Graph creation and Plotly figure generation for the Backrooms Navigator.
 import pandas as pd
 import plotly.graph_objects as go
 import networkx as nx
+from config import Config
 
-def create_graph():
+def create_graph(csv_file):
     """Create the graph using NetworkX."""
     # Step 1: Read the CSV file using Pandas
-    data = pd.read_csv('levels.csv')
+    data = pd.read_csv(csv_file)
 
     # Step 2: Create a Graph using NetworkX
     graph = nx.Graph()
@@ -83,7 +84,7 @@ def filter_graph(graph, selected_types, selected_difficulties):
                     filtered_graph.add_edge(node, neighbor)
     return filtered_graph
 
-def create_plotly_figure(graph, pos, defined_nodes):
+def create_plotly_figure(graph, pos, defined_nodes, show_green_nodes=True):
     """Create the Plotly figure for the graph."""
     # Step 4: Prepare data for Plotly (nodes and edges)
     edge_x = []
@@ -116,11 +117,12 @@ def create_plotly_figure(graph, pos, defined_nodes):
 
         # Check if the node is defined (i.e., in the 'id' column)
         if node not in defined_nodes:
-            # If the node is not defined, it should be marked as green
-            node_color.append("green")
-            node_text.append(f"{node_label}")
-            hover_text.append("(Undefined Level)<br>Difficulty: N/A")
-            urls.append("")  # No URL for undefined levels
+            if show_green_nodes:
+                # If the node is not defined, it should be marked as green
+                node_color.append("green")
+                node_text.append(f"{node_label}")
+                hover_text.append("(Undefined Level)<br>Difficulty: N/A")
+                urls.append("")  # No URL for undefined levels
         else:
             if node_id == node_label:
                 node_text.append(f"{node_id}")  # Display only ID if ID and name are the same
@@ -128,18 +130,9 @@ def create_plotly_figure(graph, pos, defined_nodes):
                 node_text.append(f"{node_id}<br>{node_label}")  # Display ID and name
 
             node_difficulty = graph.nodes[node].get('difficulty', 'N/A')
-            if node_difficulty == "?":
-                hover_text.append("Difficulty: Undetermined")
-                node_color.append("black")
-            elif node_difficulty == "var":
-                hover_text.append("Difficulty: Variable")
-                node_color.append("black")
-            elif node_difficulty == "TRANSLATION_ERROR":
-                hover_text.append("Difficulty: TRANSLATION_ERROR")
-                node_color.append("orange")
-            elif node_difficulty == "∫":
-                hover_text.append("Difficulty: Integral")
-                node_color.append("#bedff0")
+            if node_difficulty in Config.DIFFICULTY_TYPES:
+                hover_text.append(f"Difficulty: {Config.DIFFICULTY_TYPES[node_difficulty]}")
+                node_color.append("black" if node_difficulty == "?" else "orange" if node_difficulty == "TRANSLATION_ERROR" else "#bedff0")
             else:
                 hover_text.append(f"Difficulty: {node_difficulty}")
                 if isinstance(node_difficulty, str) and node_difficulty.isdigit():

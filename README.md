@@ -1,6 +1,11 @@
 # Backrooms Navigator
 
-This repository uses data from the [Backrooms MGHC Wikidot](http://backrooms-mghc.wikidot.com)
+This repository uses data from the following wikis:
+
+- [Backrooms MGHC Wikidot](http://backrooms-mghc.wikidot.com)
+- [Backrooms Wikidot](http://backrooms-wiki.wikidot.com)
+- [Backrooms Fandom Wiki](https://backrooms.fandom.com)
+- [Backrooms Freewriting Fandom Wiki](https://backrooms-freewriting.fandom.com)
 
 ## Extra Features
 
