@@ -1,0 +1,9 @@
+pandas
+plotly
+networkx
+# numpy
+# ipywidgets>=7.0.0
+dash
+pytest
+pylint
+flask

@@ -1,0 +1,342 @@
+id,name,difficulty,entrances,exits,url,lvltype
+Level 0,Tutorial Level,1,"The Frontrooms;Level 283","Level 1;Manila Room",http://backrooms-mghc.wikidot.com/level-0,normal
+Level 1,Habitable Zone,1,"Level 0;Level 11.1;Level 92;Level 94","Level 2;Level 19;Level Fun",http://backrooms-mghc.wikidot.com/level-1,normal
+Level 2,Pipe Dreams,2,"The Frontrooms;Level 1;The Hub","Level 3;Level 4;Level 1;Level 283;Level 2.1",http://backrooms-mghc.wikidot.com/level-2,normal
+Level 3,Electrical Station,3,"Level 2","Level 5;Level 4;Level 2",http://backrooms-mghc.wikidot.com/level-3,normal
+Level 4,Abandoned Office,1,"The Hub;Level 3;Level 2;Level 283","Level 5;Level 6;Level 3;Level 71",http://backrooms-mghc.wikidot.com/level-4,normal
+Level 5,Terror Hotel,2,"Level 3;Level 4;Level 19;Level 126;Level 54;Level 10;Level 82;Level 92;Level 4.2","Level 3;Level 4;Level 6;Level 9;Level 63;Level 98;Level 27;Level 40;Level 78;Level 84;Level 171",http://backrooms-mghc.wikidot.com/level-5,normal
+Level 6,Lights Out,4,"Level 6.1;Level 5;Level 1","Level 6.1;Level 7;Level 8",http://backrooms-mghc.wikidot.com/level-6,normal
+Level 7,Thalassophobia,4,"Level 6","Level 8",http://backrooms-mghc.wikidot.com/level-7,normal
+Level 8,Cave System,5,"Level 7;Level 103;Level 2.1;Level 64;Level 135;Level -4.1;Level 283","Level 9;Level 75;Level 2;Level 7;Level 91;Level 93;Level 205;Level 104;Level 69",http://backrooms-mghc.wikidot.com/level-8,normal
+Level 9,The Suburbs,5,"Level 34;Level 92;Level 40;Level 25;Level 54;Level 94;Level 87;Level 104","Level 11;Level 9.1;Level 10;Level 60;Level 53;Level 113;Level 11;Level 36;Level 283",http://backrooms-mghc.wikidot.com/level-9,normal
+Level 10,Field of Wheat,1,"Level 205;Level 12;Level 61;Level 51;Level 226;Level 170","Level 1;Level 2;Level 3;Level 14;Level 0;Level 5;Level 7;Level 9;Level -7;Level 283;Level 10.1",http://backrooms-mghc.wikidot.com/level-10,normal
+Level 11,The Endless City,1,"Level 9;The Metro;Level 11.1;Level 17;Level 25;Level 36.1;Level 61;Level 66;Level 69;Level 78;Level 87;Level 122;Level 88;Level 34;Level 40;Level 95;Level 113;Level 119;Level 92","Level 0;Level 1;Level 2;Level 3;Level 4;Level 196;Level 12;Level 13;Level 30;Level 32;Level 33;Level 34;Level 36;Level 37;Level 41;Level 43;Level 47;Level 52;Level 59;Level 60;Level 82;Level 86;Level 104;Level 131;Level 98;Level 105;Level 171;Level 176;Level 178;Level 205;Level 237;Level 275;Level 655;Level 807",http://backrooms-mghc.wikidot.com/level-11,normal
+Level 12,Matrix,0,"Level 11","Level -1;Level 1;Level 4;Level 10;Level 19;Level 23;Level 34",http://backrooms-mghc.wikidot.com/level-12,normal
+Level 13,The Infinite Apartments,2,"Level 11;Level 12;Level -2","Level -1;Level 14;Level 3;Level -5",http://backrooms-mghc.wikidot.com/level-13,normal
+Level 14,The Military Hospital,3,"Level -2","Level -2",http://backrooms-mghc.wikidot.com/level-14,normal
+Level 15,Futuristic Halls,1,"Level 3",".",http://backrooms-mghc.wikidot.com/level-15,normal
+Level 16,The Mental Asylum,1,"Level 14",".",http://backrooms-mghc.wikidot.com/level-16,normal
+Level 17,The Carrier,1,"Level 7","Level 11;Level 7;Level 18",http://backrooms-mghc.wikidot.com/level-17,normal
+Level 18,Memories,1,"Level 17","Level 19",http://backrooms-mghc.wikidot.com/level-18,normal
+Level 19,Crawlspace,1,"Level 1;Level 155","Level -1;Level -2;Level 5;Level 12;Level 20;Level 140",http://backrooms-mghc.wikidot.com/level-19,normal
+Level 20,Warehouse,0,"Level 19","Level 6;Level 22",http://backrooms-mghc.wikidot.com/level-20,normal
+Level 21,Numbered Doors,4,"Level 13;Level 11;Level 9;Level 6;Level 1.5","Level 0;Level 356;Level 46;Level -6;Level Fun;Level 8;Level 9;Level 10;Level 11;Level 12;Level 13;Level 14;Level 15;Level 16;Level 17;Level 18;Level 19;Level 20;Level 1.5",http://backrooms-mghc.wikidot.com/level-21,normal
+Level 22,Abandoned Parking Lot,3,"Level 3;Level 20","Level 23;Level 283",http://backrooms-mghc.wikidot.com/level-22,normal
+Level 23,Factory Of Overgrowth,1,"Level 18",".",http://backrooms-mghc.wikidot.com/level-23,normal
+Level 24,The Moon,1,"Level 57;Level 1","Level 1",http://backrooms-mghc.wikidot.com/level-24,normal
+Level 25,Hub of Arcades,0,"Level -2;Level 3;Level 6;Level 9;Level 10;Level 11;Level 27;Level 32;Level 37;The End;The Static;Level 18;Level 296","Level -2;Level 3;Level 6;Level 9;Level 10;Level 11;Level 27;Level 32;Level 37;The End;The Static;Level 26;Level 40",http://backrooms-mghc.wikidot.com/level-25,normal
+Level 26,Otherworldly,5,"Level 13","Level 26.1;The Basement",http://backrooms-mghc.wikidot.com/level-26,normal
+Level 27,The Woodrooms,5,"Level 2;Level 5;Level 13;Level 20","Level 0;Level 31;Level 4",http://backrooms-mghc.wikidot.com/level-27,normal
+Level 28,The Long Hall,5,".","Level 1;Level 2;Level 4;Level 8",http://backrooms-mghc.wikidot.com/level-28,normal
+Level 29,Artistic View,?,"Level 28","Level 0",http://backrooms-mghc.wikidot.com/level-29,normal
+Level 30,Avian Conservatory,1,"Level 11","Level 11",http://backrooms-mghc.wikidot.com/level-30,normal
+Level 31,Roller Rink,1,"Level 2;Level 3;Level 27;Level 6","Level 40;Level 176;Level 0",http://backrooms-mghc.wikidot.com/level-31,normal
+Level 32,Entertainland,1,"Level 11","Level 11",http://backrooms-mghc.wikidot.com/level-32,normal
+Level 33,The Infinite Mall,2,"Level 11;Level 22","Level 11;Level 22;Level 45",http://backrooms-mghc.wikidot.com/level-33,normal
+Level 34,Sewer System,4,"Level 11;Level 43;Level 18","Level 7;Level -2;Level 9;Level 87;Level 11;Level 4;Level 0;Level 99;Level 138",http://backrooms-mghc.wikidot.com/level-34,normal
+Level 35,An Empty Car Park,2,"Level 34","Level 14;Level 49",http://backrooms-mghc.wikidot.com/level-35,normal
+Level 36,Airport,1,"The Metro;Level 11;Level 9;Level 10","Level 54;Level 703;Level 36.1;Level 4;Level 42;Level 34",http://backrooms-mghc.wikidot.com/level-36,normal
+Level 37,Welcome To The Jungle,3,"Level 11;Level 149","Level -2;Level 4;Level 140;Level 62;Level 39",http://backrooms-mghc.wikidot.com/level-37,normal
+Level 38,Fold Point,5,"Level 0;Level 1;Level 2;Level 3;Level 4;Level 5;Level 6;Level 7;Level 8;Level 9;Level 10;Level 11;Level 12;Level 13;Level 14;Level 15;Level 16;Level 17;Level 18;Level 19;Level 20;Level 21;Level 22;Level 23;Level 24;Level 25;Level 26;Level 27;Level 28;Level 29;Level 30;Level 31;Level 32;Level 33;Level 34;Level 35;Level 36;Level 37;Level -0","Level 0;Level 1;Level 2;Level 3;Level 4;Level 5;Level 6;Level 7;Level 8;Level 9;Level 10;Level 11;Level 12;Level 13;Level 14;Level 15;Level 16;Level 17;Level 18;Level 19;Level 20;Level 21;Level 22;Level 23;Level 24;Level 25;Level 26;Level 27;Level 28;Level 29;Level 30;Level 31;Level 32;Level 33;Level 34;Level 35;Level 36;Level 37;Level -0;The Blue Channel",http://backrooms-mghc.wikidot.com/level-38,normal
+Level 39,Enchanted Forest,0,"Level 37;Level 135;Level 499;Level 797","Level 363;Level 129;Level 170;Level 192;Level 280;Level 300;Level 420;Level 448;Level 466;Level 363.3",http://backrooms-mghc.wikidot.com/level-39,normal
+Level 40,Roller Rockin' Pizza!,1,"Level 5;Level 25;Level 122;Level 200;Level 777;Level 19;Level 29;Level 57","Level 9;Level 10;Level 11;Level 0;Level 98;Level 176;Level 81;Level 5;Level 201;Level 1;Level 302;Level 121",http://backrooms-mghc.wikidot.com/level-40,normal
+Level 41,Draining Darkness,4,"The End;Level 11",".",http://backrooms-mghc.wikidot.com/level-41,normal
+Level 42,Everlasting Wait,0,"Level 2;Level 6.1",".",http://backrooms-mghc.wikidot.com/level-42,normal
+Level 43,Water World,3,"The Metro;Level 11;Level 7;Level 54","Level 62;Level 9;Level 58;Level 72;Level 33;Level 65;Level 40;Level 2;Level 4;Level 85;Level 34",http://backrooms-mghc.wikidot.com/level-43,normal
+Level 44,Alternis,1,"The Metro","The Metro",http://backrooms-mghc.wikidot.com/level-44,normal
+Level 45,Orange Store,1,"Level 11;Level 33;The Metro","Level 11",http://backrooms-mghc.wikidot.com/level-45,normal
+Level 46,Arabian Desert,3,"Level 80;Level 0;Level 1;Level 21","Level α;Level 4;Level 149",http://backrooms-mghc.wikidot.com/level-46,normal
+Level 47,The Frozen Labyrinth,3,"The Mountain Village;Level 11;Level 47a","Level 11",http://backrooms-mghc.wikidot.com/level-47,normal
+Level 48,The Pharaoh's Pyramid,4,"Level 46","Level 666;Level 2;Level 4",http://backrooms-mghc.wikidot.com/level-48,normal
+Level 49,Trenches of Grime,2,"Level 35",".",http://backrooms-mghc.wikidot.com/level-49,normal
+Level 50,The Moribund Highway,3,"Level 35;Level 176","Level 69",http://backrooms-mghc.wikidot.com/level-50,normal
+Level 51,Caverns Of Olympus,4,"Level 34;Level 29","Level 10;Level 20;Level α;Level Δ;Level Θ;Level ∞",http://backrooms-mghc.wikidot.com/level-51,normal
+Level 52,School Halls,1,"Level 11;Level 18","Level 53",http://backrooms-mghc.wikidot.com/level-52,normal
+Level 53,Alone,0,"Level 9;Level 52",".",http://backrooms-mghc.wikidot.com/level-53,normal
+Level 54,Stairwell Of Spirals,2,"Level 17","Level 1;Level 4;Level 5;Level 9;Level 17;Level 21;Level 34;Level 43;Level 58;Level 216;Level 280;Level 33;Level 61",http://backrooms-mghc.wikidot.com/level-54,normal
+Level 55,Land of Ice,2,"Level 11;Level 5;Level 20","Level 11;Level 666;The Hub",http://backrooms-mghc.wikidot.com/level-55,normal
+Level 56,The Sinister Factory,4,"Level 4","Level 3",http://backrooms-mghc.wikidot.com/level-56,normal
+Level 57,"Art Gallery",0,"Level 0;Level 21;Level 283","Level 21",http://backrooms-mghc.wikidot.com/level-57,normal
+Level 58,Mud Slide,1,"Level 66","Level 43;Level 58.1",http://backrooms-mghc.wikidot.com/level-58,normal
+Level 59,The Backway,4,"Level 11;Level 158;Level 77;The Metro","Level 158",http://backrooms-mghc.wikidot.com/level-59,normal
+Level 60,A Clean Slate,0,"Level 11;Level 9","Level 11;Level 61",http://backrooms-mghc.wikidot.com/level-60,normal
+Level 61,The Train,4,"Level 60","Level 4;Level 10;The Metro;Level 11",http://backrooms-mghc.wikidot.com/level-61,normal
+Level 62,Jungle Backyard,2,"Level 37","Level -4;Level 37;Level 4;Level 10",http://backrooms-mghc.wikidot.com/level-62,normal
+Level 63,Expansive Cabin,4,"Level 34;Level 41;Level 16;Level 20;Level 5","Level 37;Level 11.1;Level 2;Level 25;Level 10;Level 4;The Basement;Level -2",http://backrooms-mghc.wikidot.com/level-63,normal
+Level 64,The Lurking Darkness,3,"Level 65;Level 98;Level 6;Level 2","Level 9;Level 200;Level 0;Level 57;Level 8",http://backrooms-mghc.wikidot.com/level-64,normal
+Level 65,Randomized Elevators,1,"Level 64",".",http://backrooms-mghc.wikidot.com/level-65,normal
+Level 66,Swampy Waters,3,"Level 34;Level 10;Level 78","Level 11",http://backrooms-mghc.wikidot.com/level-66,normal
+Level 67,Αρτοποιείο Desire,2,"Level 11;Level 122;Level 226","Level 11;Level 31;Level 57;Level 98;Level 122;Level 153",http://backrooms-mghc.wikidot.com/level-67,normal
+Level 68,The Eater,3,"Level 11","Level 94;Level 117;Level 74",http://backrooms-mghc.wikidot.com/level-68,normal
+Level 69,The Road Trip of Affliction,?,"Level 3;Level 6;Level 8;Level 23;Level 33","Level 11;Level 22;Level 4;Level 0",http://backrooms-mghc.wikidot.com/level-69,normal
+Level 70,Deposit,1,"Level 2","Level 71",http://backrooms-mghc.wikidot.com/level-70,normal
+Level 71,Void Basement,3,"Level 4","Level 3",http://backrooms-mghc.wikidot.com/level-71,normal
+Level 72,Over the Ground,1,"Level 59","Level 59;Level 77;Level 126",http://backrooms-mghc.wikidot.com/level-72,normal
+Level 73,The Shooting Gallery,1,"Level 11;Level -8","Level 11;Level -8;Level 22",http://backrooms-mghc.wikidot.com/level-73,normal
+Level 74,Stage Fright,3,"Level 117;Level 68","The Insulation",http://backrooms-mghc.wikidot.com/level-74,normal
+Level 75,Gallium Caves,3,"Level 8;Level 204;Level 420;Level 797;Level 817","Level 16;Level 302;Level 495;Level 211",http://backrooms-mghc.wikidot.com/level-75,normal
+Level 76,Claustrophobia,?,"Level 2","The End",http://backrooms-mghc.wikidot.com/level-76,normal
+Level 77,The Underground Train,3,"Level 72","Level 72;Level 59;Level 125;The End",http://backrooms-mghc.wikidot.com/level-77,normal
+Level 78,Space Station,2,"Level 56;Level 5","Level 11",http://backrooms-mghc.wikidot.com/level-78,normal
+Level 79,Watch Tower,0,"Level 9;Level 11;Level 140;Level 37;Level 62;Level 10","Level 37;Level 11;Level 24;Level 10",http://backrooms-mghc.wikidot.com/level-79,normal
+Level 80,Route 66,0,"Level 9;Level 125;Level 410;Level 50;Level 11","Level 150;Level 46;Level 205;Level 93",http://backrooms-mghc.wikidot.com/level-80,normal
+Level 81,Zoological Office,2,"Level 10;Level 4;Level 58;Level 21;Level 80;Level 43","Level 30;Level 22;Level 55;Level 0;Level 4;Level 37;Level 62;Level 34;Level 41;Level 64;Level 65;Level 88;Level 170",http://backrooms-mghc.wikidot.com/level-81,normal
+Level 82,Saneless Mansion,4,"The Mountain Village;Level 11;Level 169",".",http://backrooms-mghc.wikidot.com/level-82,normal
+Level 83,The Sunken Submarine,0,"Level 7","Level 7;Level 8",http://backrooms-mghc.wikidot.com/level-83,normal
+Level 84,Pre-metamorphosis,?,"Level 18","Level 84.1",http://backrooms-mghc.wikidot.com/level-84,normal
+Level 85,Ship In The Sea,3,".","Level 86",http://backrooms-mghc.wikidot.com/level-85,normal
+Level 86,Rivergate Tower,0,"Level 11","Level 4",http://backrooms-mghc.wikidot.com/level-86,normal
+Level 87,Hallways of Time,1,"Level 21;Level 9","Level 119",http://backrooms-mghc.wikidot.com/level-87,normal
+Level 88,Corri-Doors,1,"Level 13;Level 156;Level 356","Level 11;Level 33;Level 363",http://backrooms-mghc.wikidot.com/level-88,normal
+Level 89,A Taste of Home,1,"Level 11;Level 18;Level 6.1;Level 52","Level 11.1;Level 6.1;Level 11;Level 18;Level 52;Level Fun",http://backrooms-mghc.wikidot.com/level-89,normal
+Level 90,Newly Renovated Home,0,"Level 200",".",http://backrooms-mghc.wikidot.com/level-90,normal
+Level 91,Noir,1,"Level 8",".",http://backrooms-mghc.wikidot.com/level-91,normal
+Level 92,Crimson Glow,3,"Level 34;Level 42","Level 0;Level 5;Level 9;Level 37;Level 65;Level 11",http://backrooms-mghc.wikidot.com/level-92,normal
+Level 93,The Summit,4,"Level 8;Level 47;Level 135;Level 115;The Mountain Village","Level 135",http://backrooms-mghc.wikidot.com/level-93,normal
+Level 94,Motion,3,"The Hub","Level 7;Level 9;Level 53",http://backrooms-mghc.wikidot.com/level-94,normal
+Level 95,Custodian Hall,2,"Level 3;Level 4;Level 52;Level 176;Level 321","Level 11;Level 52",http://backrooms-mghc.wikidot.com/level-95,normal
+Level 96,Akabash Island,?,"Level 0;Level 7","Level 6;Level 7",http://backrooms-mghc.wikidot.com/level-96,normal
+Level 97,Lighthouse,3,"Level 17;Level 532;Level -183","Level 100;Level 372;Level -183;Level 448",http://backrooms-mghc.wikidot.com/level-97,normal
+Level 98,Downtown Diner,1,"Level 5;Level 11;Level 6;The Hub","Level 6;Level 103",http://backrooms-mghc.wikidot.com/level-98,normal
+Level 99,Distant Light,?,"Level 34","Level 0;The Hub",http://backrooms-mghc.wikidot.com/level-99,normal
+Level 100,Silent Sounds,?,"Level 11","Level 0",http://backrooms-mghc.wikidot.com/level-100,normal
+Level 101,Mountainside Villa,1,"Level 11","Level 11;Level 58",http://backrooms-mghc.wikidot.com/level-101,normal
+Level 102,Mall or no mall?,3,"Level 13","Level 103;Level 41",http://backrooms-mghc.wikidot.com/level-102,normal
+Level 103,Vertical Lighting,0,"The Hub;Level 102","Level 8",http://backrooms-mghc.wikidot.com/level-103,normal
+Level 104,Fullerest House,2,"Level 0;Level 8","Level 9",http://backrooms-mghc.wikidot.com/level-104,normal
+Level 105,Gothic Cathedral,1,"Level 11;Level 126","Level 11;Level 666;Level Fun",http://backrooms-mghc.wikidot.com/level-105,normal
+Level 106,The Progressive Decay,4,".","Level 0;Level 4;Level 13;Level 26;Level 33",http://backrooms-mghc.wikidot.com/level-106,normal
+Level 107,Splintered Reality,4,"Level 106;Level 135","Level 68;Level 108",http://backrooms-mghc.wikidot.com/level-107,normal
+Level 108,Spire Complex,1,"Level 6;Level 65","Level 69;Level 111;Level 165;Level 170;Level 155",http://backrooms-mghc.wikidot.com/level-108,normal
+Level 109,The Neon Hospital,2,"Level 11;Level 14","Level 114",http://backrooms-mghc.wikidot.com/level-109,normal
+Level 110,Tenebrosity,2,"Level 76","Level 51;Level -5;Level 4.3",http://backrooms-mghc.wikidot.com/level-110,normal
+Level 111,The Model Floor,1,"The Insulation;Level 52;Level 94","Level 9",http://backrooms-mghc.wikidot.com/level-111,normal
+Level 112,Mouths,2,".","The End",http://backrooms-mghc.wikidot.com/level-112,normal
+Level 113,Deum De Machinis,2,"Level 3;Level 9;Level 80;Level 23","Level 2;Level 23;Level 11;Level 0",http://backrooms-mghc.wikidot.com/level-113,normal
+Level 114,Vertigo,4,"Level 14","Level 4",http://backrooms-mghc.wikidot.com/level-114,normal
+Level 115,Frozen Dream,3,".","Level 115.5",http://backrooms-mghc.wikidot.com/level-115,normal
+Level 116,Ice Rink,1,"Level 47;Level 115;Level -5;The Gift Plane;Level 47;Level 47a;Level 7","Level 31;Level 40;Level 115",http://backrooms-mghc.wikidot.com/level-116,normal
+Level 117,Math Class,4,"Level 83;Level 18","Level 190;Level 4;Level 74",http://backrooms-mghc.wikidot.com/level-117,normal
+Level 118,Camp,3,"Level 135","Level 135",http://backrooms-mghc.wikidot.com/level-118,normal
+Level 119,Average Waterpark..?,4,"Level 11","Level 11",http://backrooms-mghc.wikidot.com/level-119,normal
+Level 120,Broken Servos,2,"Level 4.3;Level 25","Level 4.3;Level 70",http://backrooms-mghc.wikidot.com/level-120,normal
+Level 121,The Fading Islands,2,"Level 323;Level 134;Level 125;Level 8;Level 7","Level 323;Level 85;Level 97;Level 125",http://backrooms-mghc.wikidot.com/level-121,normal
+Level 122,Janitor's Lit Up Mall,3,"Level 109;Level 480","Unnamed;The Metro;Level 40;Level 11;Level 67;The Blackout",http://backrooms-mghc.wikidot.com/level-122,normal
+Level 123,The Almond Water Factory,3,"Level 4;Level 1","Level 4",http://backrooms-mghc.wikidot.com/level-123,normal
+Level 124,Purple Rooms,1,"Level 97","Level 97",http://backrooms-mghc.wikidot.com/level-124,normal
+Level 125,Legacy Lane,1,"Level 121;Level 83;Level 4","Level 121;Level 100;Level 135;Level 10",http://backrooms-mghc.wikidot.com/level-125,normal
+Level 126,Last Dance,4,"Level 2;Level 3;Level 72","Level 175;Level 196;Level 105;Level 5",http://backrooms-mghc.wikidot.com/level-126,normal
+Level 127,A Very Warm Basement,4,"Level 2;Level 64","Level 2;Level 90",http://backrooms-mghc.wikidot.com/level-127,normal
+Level 128,The Great Outdoors,1,".",".",http://backrooms-mghc.wikidot.com/level-128,normal
+Level 129,The White Forest,4,"Level 6;Level 11.1;Level 21;Level 39;Level 47;Level 115;Level 116;Level 188","Level 130;Level 280;Level 11.1",http://backrooms-mghc.wikidot.com/level-129,normal
+Level 130,Tainted Pools,1,"Level 129;Level 33","Level 131;Level -33",http://backrooms-mghc.wikidot.com/level-130,normal
+Level 131,Televised Horror,2,".",".",http://backrooms-mghc.wikidot.com/level-131,normal
+Level 132,Beach House,1,"Level 100;Level 46;Level 125;Level 178;Level 134","Level 134;Level 100;The Hub;Level 3;Level 6",http://backrooms-mghc.wikidot.com/level-132,normal
+Level 133,Ancient Ruins,1,"Level 134;Level 51","Level 100;Level 134;Level 17",http://backrooms-mghc.wikidot.com/level-133,normal
+Level 134,Wrekage by the Sea,1,"Level 7.2;Level 43","Level 7;Level 5",http://backrooms-mghc.wikidot.com/level-134,normal
+Level 135,Skazka,?,"Level -6;Level -7;Level 47;Level 93;Level 140","Level 8;Level 66;Level 127;Level -7;Level -5;Level 93;Level 39",http://backrooms-mghc.wikidot.com/level-135,normal
+Level 136,Skeletons in the Closet,0,".",".",http://backrooms-mghc.wikidot.com/level-136,normal
+Level 137,Pitch Black,4,"Level 0;Level 1;Level 4","Level 20",http://backrooms-mghc.wikidot.com/level-137,normal
+Level 138,Golden Gai,3,"Level 11;Level 34","Level 183;Level 176",http://backrooms-mghc.wikidot.com/level-138,normal
+Level 139,The Ferry,4,"Level 500;Level 138;Level 1;Level 248","Level 36;Level 500;Level 17;Level 6",http://backrooms-mghc.wikidot.com/level-139,normal
+Level 140,The Dry Hill,1,"Level 19;Level 37;Level 149;Level 173;Level 797","Level 79;Level 135;Level 300",http://backrooms-mghc.wikidot.com/level-140,normal
+Level 141,The Boiler Rooms,4,"Level 5;Level 11;Level 2;Level 25","Level 1;Level 2;Level 3;Level 4;Level 5;Level 6;Level 102;Level 65;Level -5;Level 14;Level Fun;Level 11;Level Achromatopsia",http://backrooms-mghc.wikidot.com/level-141,normal
+Level 142,The Urban Hotel,1,"Level 11","Level 27;Level 4.1;Level 54;Level -2;The End;Level 34;Level 7",http://backrooms-mghc.wikidot.com/level-142,normal
+Level 143,The Play Area,3,".","Level 4;Level 5;Level 6;Level 7;Level 8;Level 9",http://backrooms-mghc.wikidot.com/level-143,normal
+Level 144,The Giant's Causeway,5,".",".",http://backrooms-mghc.wikidot.com/level-144,normal
+Level 145,We Will Not Be Forgotten!,3,"Level 11;Level 0",".",http://backrooms-mghc.wikidot.com/level-145,normal
+Level 146,The Tavern of Thanks,0,"Level 129;Level 39","Level 129",http://backrooms-mghc.wikidot.com/level-146,normal
+Level 147,Such a familiar route,2,"Level 11;Level 9","Level 4;Level 0",http://backrooms-mghc.wikidot.com/level-147,normal
+Level 148,The Living Level,5,"Level 151;Level 365;Level 345","Level 166;Level 365;Level 68;Level 66;The Hive",http://backrooms-mghc.wikidot.com/level-148,normal
+Level 149,The Coconut Isles,0,"Level 46","Level 37;Level 140",http://backrooms-mghc.wikidot.com/level-149,normal
+Level 150,Memory Foundry,3,"Level 10","Level 10;Level 23;Level 113",http://backrooms-mghc.wikidot.com/level-150,normal
+Level 151,The Dollhouse,TRANSLATION_ERROR,"Level 150;The Hub;Level 178;Level 188;Level 98",".",http://backrooms-mghc.wikidot.com/level-151,normal
+Level 153,Brock's Book Shop,3,"Level 75;Level 67","Level 906;Level 75;Level 89;Level 520",http://backrooms-mghc.wikidot.com/level-153,normal
+Level 154,The Laser Game,3,"Level 1","Level 1",http://backrooms-mghc.wikidot.com/level-154,normal
+Level 155,The Sparkling Maze,3,"Level 108;Level 224;Level 448;Level 532;Level 797","Level 19",http://backrooms-mghc.wikidot.com/level-155,normal
+Level 156,The Under-Structure,1,"Level 0","Level 0;Level 1",http://backrooms-mghc.wikidot.com/level-156,normal
+Level 158,Repeating Basketball Court,5,"Level 7;The Hive","Level Achromatopsia",http://backrooms-mghc.wikidot.com/level-158,normal
+Level 159,Beastland,4,"Level 1;Level 4;Level 36;Level 11","Level 11;Level 40;Level 34",http://backrooms-mghc.wikidot.com/level-159,normal
+Level 160,Orange Office of Oligarchy,5,"Level 4;Level 9;Level 11;Level 161","Level 4;Level 9;Level 11;Level 161;Level !;The Basement;Level 3495;Level 6;Level 54",http://backrooms-mghc.wikidot.com/level-160,normal
+Level 161,The World,4,"Level 158;Level 11;Level 985;Level 92;Level 8;Level 9;Level 7;Level 100;Level 4;Level 5;Level 170;Level 160","Level 100;Level 5;Level 52;Level 160;Level 162;Level 11;Level 9;Level 24;Level 296;Level 7;Level 54;Level 92;Level 93;Level 94;Level 109;Level 34;Level 985",http://backrooms-mghc.wikidot.com/level-161,normal
+Level 162,The Concrete Wall,0,"Level 20;Level 81;Level 170;Level 172;Level 176;Level -14","Level 0;Level 1;Level 57;Level 81;Level 170;Level 189;Level 277;Level 111;Level 409;Level 566;The End",http://backrooms-mghc.wikidot.com/level-162,normal
+Level 163,The Call of the Void,0,"Level 9;Elevator Shaft","Level 3;Level 4;Level 5;Level 998",http://backrooms-mghc.wikidot.com/level-163,normal
+Level 164,Historical Horde,2,"Level 33;Level 11","Level 57;Level 84",http://backrooms-mghc.wikidot.com/level-164,normal
+Level 165,The Garden of Eden,1,"Level 9;Level 45","Level 27;Level 37",http://backrooms-mghc.wikidot.com/level-165,normal
+Level 166,130 SINKHOLE ST.,2,"Level 90;Level 69","Level 183;Level 104;The Blackout",http://backrooms-mghc.wikidot.com/level-166,normal
+Level 167,America's Favourite Pastime,1,"Level 40;Level 168;Level 480;Level 777","Level 98;Level 132;Level 153;Level 220;Level 648",http://backrooms-mghc.wikidot.com/level-167,normal
+Level 168,No Peeking!,1,".","Level 18;Level 27;Level 178;Level 282;Level 9;Level 90;Level 10;Level 11;Level 172",http://backrooms-mghc.wikidot.com/level-168,normal
+Level 169,Welcome to The Desert,1,".","Level 11",http://backrooms-mghc.wikidot.com/level-169,normal
+Level 170,Concrete Boxes,2,"Level 39;Level 81;Level 162;Level 108;Level 192;Level 797","Level 10;Level 162;Level 181;Level 204",http://backrooms-mghc.wikidot.com/level-170,normal
+Level 172,The Industrial Region,3,"Level 11","Level 11;Level 20;The Metro;Level 56;Level -183;Level 22;Level 171;Level 4",http://backrooms-mghc.wikidot.com/level-172,normal
+Level 173,Watery Grave Caves,4,"Level 172;Level 8;Level 3;Level 300","Level 174;Level 66;Level 140;Level 2;Level 6;Level 994;Level 998;Level 666;Level 899;Level 532;The End",http://backrooms-mghc.wikidot.com/level-173,normal
+Level 174,He is in the House,4,"Level 0;Level 64;Level 173","Level 175;The Insulation",http://backrooms-mghc.wikidot.com/level-174,normal
+Level 175,The Bluerooms,0,"Level 2;Level 126;The Hub","Level 3",http://backrooms-mghc.wikidot.com/level-175,normal
+Level 176,Restocking Shelves,1,"Level 11;Level 29;Level 138;Level 20","Level 34;Level 17;Level 11;Level 50;Level 20;Level 177",http://backrooms-mghc.wikidot.com/level-176,normal
+Level 177,Standing Ovation,2,".",".",http://backrooms-mghc.wikidot.com/level-177,normal
+Level 178,Kyoto Dreams,0,"Level 127;Level 11;Level 7;Level 138","Level 178.1;Level 66;Level 132;Level 138;Anti Reality Bowling Alley",http://backrooms-mghc.wikidot.com/level-178,normal
+Level 179,Thrift for the Lost and Found,0,"Level 11;Level 33;Level 36;Level 82;Level 102;Level 224;Level 167;Level 207;Level 215;Level 990;Level 179;Level 209;Level 420",".",http://backrooms-mghc.wikidot.com/level-179,normal
+Level 180,Voyager's Sea,1,".",".",http://backrooms-mghc.wikidot.com/level-180,normal
+Level 181,Protected Caverns,?,"Level 4;Level 170","Level 43",http://backrooms-mghc.wikidot.com/level-181,normal
+Level 182,"Know Your Place, Human.",5,"Level 16;Level 19;Level 27;Level 54;Level 108","Level 10",http://backrooms-mghc.wikidot.com/level-182,normal
+Level 183,Clean Sewers,2,".","Level 183.1",http://backrooms-mghc.wikidot.com/level-183,normal
+Level 186,The Infinite Valley,0,"Level 5;Level 57","Level 11;Level 185;",http://backrooms-mghc.wikidot.com/level-186,normal
+Level 188,The Courtyard of Windows,5,"The Hub","Level Fun",http://backrooms-mghc.wikidot.com/level-188,normal
+Level 189,PUBLIC BATHROOM TERROR,5,"Level 11;The Frontrooms;Level 161","Level 170",http://backrooms-mghc.wikidot.com/level-189,normal
+Level 190,School Detention,2,"Level 156;Level 210","Level 807",http://backrooms-mghc.wikidot.com/level-190,normal
+Level 191,Puzzling Complex,0,"Level 26;Level 49;Level 123;Level 153;Level 224;Level 356;The End","Level -3;Level 70;Level 175;Level 811;The Frontrooms",http://backrooms-mghc.wikidot.com/level-191,normal
+Level 196,Distorted Hotel,3,"Level 11;Level 188;Level 1","Level 0;Level 11;Level 188",http://backrooms-mghc.wikidot.com/level-196,normal
+Level 197,BATHROOM MADNESS,4,"Level 196","Level 9;Level =",http://backrooms-mghc.wikidot.com/level-197,normal
+Level 198,Descent,0,"Level 78",".",http://backrooms-mghc.wikidot.com/level-198,normal
+Level 199,Oneiric Forest,?,"Crimson Forest;Level 37;Level 797",".",http://backrooms-mghc.wikidot.com/level-199,normal
+Level 200,Home,0,".",".",http://backrooms-mghc.wikidot.com/level-200,normal
+Level 201,A E S T H E T I C,1,"Level 1;Level 0;Level 4;Level 11;Radio Backrooms' Studio;Level 18;Level 33","Level 25;Level 40;Level Fun",http://backrooms-mghc.wikidot.com/level-201,normal
+Level 202,Halls of Chalk,3,"Level 117;Level 321",".",http://backrooms-mghc.wikidot.com/level-202,normal
+Level 203,Dead End,?,"Level 8",".",http://backrooms-mghc.wikidot.com/level-203,normal
+Level 204,The Grand Jungle,2,"Level 170;Level 40","Level 129;Level 75",http://backrooms-mghc.wikidot.com/level-204,normal
+Level 205,Archaeology,1,"Level 8;Level 11;Level 10;Level 80","Level 11;Level 10;Level Fun",http://backrooms-mghc.wikidot.com/level-205,normal
+Level 206,The Sunset Beach,0,"Level 134;Level 121;Level 188;Level 21;Level 11;Level 46","Level 581;Level 121;Level 100;Level 10",http://backrooms-mghc.wikidot.com/level-206,normal
+Level 207,Inter-Debris,4,"Level 11;Level 10;Level 9","Level 11;Level 9;Level 990",http://backrooms-mghc.wikidot.com/level-207,normal
+Level 208,Rooftop Run,3,"Level -998;Level -7;Level 90;Level 94;Level 125;Level 163;Level 166;Level 167;Level 186;Level 200;Level 230;Level 399;Level 995","Level -1;Level 356;Level 35;Level 70;Level 102;Level 71;Level 108;Level 175;Level 145;Level 912;Level 155;Level 409;Level -33;Level 237;Level 369;Level 374;Level 225;Level 365;Level -14;Level 853",http://backrooms-mghc.wikidot.com/level-208,normal
+Level 209,Ol' Chippy,1,"Level 6.1;Level 9.2;Level 299","Level 34;Level 20;Level 69;Level 179",http://backrooms-mghc.wikidot.com/level-209,normal
+Level 210,Void Hallway,5,"Level 209","Level 211",http://backrooms-mghc.wikidot.com/level-210,normal
+Level 211,Stomach Lining,1,"Level 8;Level 75;Level 173;Level 797","Level 62;Level 10",http://backrooms-mghc.wikidot.com/level-211,normal
+Level 212,Homeroom Class,4,"Level 19;Level 0","Level 115;The Blue Channel;Level 124;Level α;Level 6.1;Level 12;The Hub;Level 0;Level 1.5",http://backrooms-mghc.wikidot.com/level-212,normal
+Level 213,Ollie's,0,"Level 11","The Hub;Level 11",http://backrooms-mghc.wikidot.com/level-213,normal
+Level 214,The Garden of Confession,1,"Level 369;Level 10;Level 165;Level 841;Level 11","Level 369;Level 165;Level 10;Level 841;Level 371;The Blue Channel",normal
+Level 215,Harborside View,5,"Level 147;Level 9;Level 399;Level 11","Level 215;Level 974;Level 167;Level 13;Level 9;Level 11;Level 399;Level 1;Level 52;Level 109",http://backrooms-mghc.wikidot.com/level-215,normal
+Level 216,Unorthodox,4,"Level 54","Level 217;Level 19",http://backrooms-mghc.wikidot.com/level-216,normal
+Level 217,The Space Junkyard,4,"Level 83;Level 78;Level 3.1;Level 36.1","Level 78",http://backrooms-mghc.wikidot.com/level-217,normal
+Level 218,Dead Man's Mile,4,"Level 34.1;Level 11;Level 1;Level 2;Level 10","Level 990;Level 502;Level 215",http://backrooms-mghc.wikidot.com/level-218,normal
+Level 219,Dark Hotel,4,"Level 218","Level 220;Level 11",http://backrooms-mghc.wikidot.com/level-219,normal
+Level 220,The Dirt Laboratory,4,"Level 8;Level 13;Level 215",".",http://backrooms-mghc.wikidot.com/level-220,normal
+Level 221,Dreamscape,?,"The End;Level 221.∞","Level 101;Level 221.∞;Level 994",http://backrooms-mghc.wikidot.com/level-221,normal
+Level 222,Castellos' Museum,∫,"Level 46;Level 11;Level 158;Level 201;Level 190","Level 198;Level 302",http://backrooms-mghc.wikidot.com/level-222,normal
+Level 224,Avelon,1,".","Level 35;Level 155;Level 102",http://backrooms-mghc.wikidot.com/level-224,normal
+Level 225,Dazzling Purity,3,"Level 33;Level 6.1","Level 4",http://backrooms-mghc.wikidot.com/level-225,normal
+Level 226,The Dream Feast,3,"Level 18","Level 998;Level -9;Level 226.1",http://backrooms-mghc.wikidot.com/level-226,normal
+Level 229,A Flash of Neon,1,"Level 11","Level 1;Level 4;Level 317",http://backrooms-mghc.wikidot.com/level-229,normal
+Level 230,The Port of Misgivings,3,"Level 6.1;Level 230","Level 8;Level 90",http://backrooms-mghc.wikidot.com/level-230,normal
+Level 232,The Antique Store,3,"Level 0;Level 11;Level 31;Level 36;Level 40;Level 153","Level 5",http://backrooms-mghc.wikidot.com/level-232,normal
+Level 235,The Infinite Trampoline Park,5,"Level 283;Level 13;Level 59","Level 34;Level 6.1;Level 236",http://backrooms-mghc.wikidot.com/level-235,normal
+Level 237,The Poolrooms,0,"Level 296;Level 7;Level 11;Level -33;Level 46;Level 430;Level -132;Level 997;Level 130","Level -33;Level -34;Level 4242;The Whiteout; Level 6;Level 858;Level 370;Level 296",http://backrooms-mghc.wikidot.com/level-237,normal
+Level 238,Luminous Atrium,1,"Level 699;Level -33;Level 340","Level 341;Level 448;Level 65;Level -33;Level 22",http://backrooms-mghc.wikidot.com/level-238,normal
+Level 240,Lotka Lake,1,"Level 33;Level 52;Level 117;Level 283",".",http://backrooms-mghc.wikidot.com/level-240,normal
+Level 241,All Dogs Go To...,1,".",".",http://backrooms-mghc.wikidot.com/level-241,normal
+Level 244,Corroding Retail Outlet,3,"Level 0","Level 11;Level 9",http://backrooms-mghc.wikidot.com/level-244,normal
+Level 245,Abyss Inc.,1,"The Hub;Level 90","The Hub",http://backrooms-mghc.wikidot.com/level-245,normal
+Level 247,The Waterpark,2,".","Level 248;Level 7",http://backrooms-mghc.wikidot.com/level-247,normal
+Level 248,Abandoned Pools,2,"Level 247;Level 7","Level 249;Level 5",http://backrooms-mghc.wikidot.com/level-248,normal
+Level 249,Minimal Network,3,"Level 46;Level 3;Level 248","Level 19;Level 1297",http://backrooms-mghc.wikidot.com/level-249,normal
+Level 250,The Field of Two Stars,0,".",".",http://backrooms-mghc.wikidot.com/level-250,normal
+Level 253,The 5 Stores,4,"Level 11;Level 480","Level 3;Level 11",http://backrooms-mghc.wikidot.com/level-253,normal
+Level 254,Blue Heaven,?,"Level -1","Level 11",http://backrooms-mghc.wikidot.com/level-254,normal
+Level 255,RGB,2,"Level 254;Level 165;The Whiteout;Level 230","Level 300;Level 205;Level 256",http://backrooms-mghc.wikidot.com/level-255,normal
+Level 256,Demoscene,?,"Level 4",".",http://backrooms-mghc.wikidot.com/level-256,normal
+Level 258,The Rug Room,?,"Level 148;Level 7;Level 19","Level 1103",http://backrooms-mghc.wikidot.com/level-258,normal
+Level 266,GROUND(UP),3,"Level 166","Level 148",http://backrooms-mghc.wikidot.com/level-266,normal
+Level 267,Waterways,3,"Level 7;Level 237;The End;Level 339","Level 4000;Level 431;Level 268;The Hub;Level 237",http://backrooms-mghc.wikidot.com/level-267,normal
+Level 270,Red World,4,"Level 10","The End",http://backrooms-mghc.wikidot.com/level-270,normal
+Level 275,Swimming Pool,4,"Level 11","Level 11;Level Fun",http://backrooms-mghc.wikidot.com/level-275,normal
+Level 280,Foggy Staircases,2,"Level 54;Level 39;Level 563;Level 129","Level 8",http://backrooms-mghc.wikidot.com/level-280,normal
+Level 282,Past Memories,?,"The Hub","Level 10;Level 188",http://backrooms-mghc.wikidot.com/level-282,normal
+Level 283,PlayLand,3,"Level 2;Level 9;Level 10;Level 22;Level Fun","Level 0;Level 57;Level 8;Level 1;Level 4",http://backrooms-mghc.wikidot.com/level-283,normal
+Level 285,Mercury Coast,3,"Level 7","Level 1993;Level 7",http://backrooms-mghc.wikidot.com/level-285,normal
+Level 290,Multiplex,0,"Level 68;Level 177","Level 74;Level 104;Level 142",http://backrooms-mghc.wikidot.com/level-290,normal
+Level 291,Lost at Sea,2,"Level 17;Level 11","Level 17;Level 37;Level Fun",http://backrooms-mghc.wikidot.com/level-291,normal
+Level 292,Digital Nostalgia,4,"Level 117;Level 4","Level 122;Level 120;Level 0;Level 1;Level 11",http://backrooms-mghc.wikidot.com/level-292,normal
+Level 295,Hometown,4,"Level 11;Level 70;Level 4;Level 290","Level 11;Level 0;Level 290;Level 296",http://backrooms-mghc.wikidot.com/level-295,normal
+Level 296,The Supermarket,0,"Level 11;Level 295;Level 237","Level 22;Level 33;Level 20;Level 55;Level 237;Level Fun;Level 296.1;Level 297",http://backrooms-mghc.wikidot.com/level-296,normal
+Level 297,Wanderer's Rest,1,"Level 296;Level 11;Level 900","Level 1;Level 5;Level 19;Level 178;Level 201;Level 295;Level 900;Level 1012;Level 1111",http://backrooms-mghc.wikidot.com/level-297,normal
+Level 299,Westminster Alley,1,".",".",http://backrooms-mghc.wikidot.com/level-299,normal
+Level 300,The Boardwalks to the Rainbow,2,"Level 39;Level 140;Level 797","Level 173",http://backrooms-mghc.wikidot.com/level-300,normal
+Level 301,The Constantinople Building,1,"Level 50;Level 53;Level 47","Level 37;Level 10;Level -5;Level 423;Level β;Level 8.1",http://backrooms-mghc.wikidot.com/level-301,normal
+Level 302,The Grand National Park,?,"Level 8;Level 75;Level 101;level 165","Level 8;Levek 93",http://backrooms-mghc.wikidot.com/level-302,normal
+Level 303,Swimming Pools,1,"Level 302","Level 304",http://backrooms-mghc.wikidot.com/level-303,normal
+Level 304,Las Panaderias,var,"Level 67;Level 11;The Frontrooms","Level 404;Level 11",http://backrooms-mghc.wikidot.com/level-304,normal
+Level 307,Movie Theatre Nightmares,3,"Level 340;Level -90","Level 6;Level -1;Level 0",http://backrooms-mghc.wikidot.com/level-307,normal
+Level 308,Isolation Walkway,?,"Level 367","Level 100",http://backrooms-mghc.wikidot.com/level-308,normal
+Level 309,The Fog and The Path,1,"Level 9;Level 4;Level 37;Level 1047","Level 46;Level 10;Level 2;Level 474;Office Space EL3A;Level 474;Level 39",http://backrooms-mghc.wikidot.com/level-309,normal
+Level 311,Land of Fog,2,"Level 10;Level 873;Level 9;Level 11;Level 7","Level 6.1;Level 8;Level -560;Level 11;Level 7",http://backrooms-mghc.wikidot.com/level-311,normal
+Level 314,The Control Room,?,".",".",http://backrooms-mghc.wikidot.com/level-314,normal
+
+
+
+
+
+
+
+
+
+
+
+Manila Room,Manila Room,0,"Level 0",".",http://backrooms-mghc.wikidot.com/manila-room,anomalous
+Traders Vault,Traders Vault,1,".",".",http://backrooms-mghc.wikidot.com/traders-vault,anomalous
+Mark's Bathroom,Mark's Bathroom,2,".",".",http://backrooms-mghc.wikidot.com/mark-s-bathroom,anomalous
+Office Space EL3A,Office Space EL3A,1,"Level 2",".",http://backrooms-mghc.wikidot.com/office-space-el3a,anomalous
+The Surveillance Room,The Surveillance Room,1,".",".",http://backrooms-mghc.wikidot.com/the-surveillance-room,anomalous
+The Chair Room,The Chair Room,1,".","Level 4",http://backrooms-mghc.wikidot.com/the-chair-room,anomalous
+The Auditorium,The Auditorium,0,"Level 4","Level 4",http://backrooms-mghc.wikidot.com/the-auditorium,anomalous
+Radio Backrooms' Studio,Radio Backrooms' Studio,0,"Level 11;Level 4;Level 21","Level 11",http://backrooms-mghc.wikidot.com/radio-backrooms-studio,anomalous
+The Headquarters,The Headquarters,3,"Level 11",".",http://backrooms-mghc.wikidot.com/the-headquarters,anomalous
+The Mirror Room,The Mirror Room,1,".",".",http://backrooms-mghc.wikidot.com/the-mirror-room,anomalous
+The Chamber,The Chamber,?,".",".",http://backrooms-mghc.wikidot.com/the-chamber,anomalous
+The Atrium,The Atrium,0,"Level 43","Level 43",http://backrooms-mghc.wikidot.com/the-atrium,anomalous
+The Enclave,The Enclave,0,"Level 206.1",".",http://backrooms-mghc.wikidot.com/the-enclave,anomalous
+
+Level 0.1,Chaotic Structure,3,"Level 0",".",http://backrooms-mghc.wikidot.com/level-0-1,sub
+Level 0.2,Remodeled Mess,3,"Level 0","Level 0",http://backrooms-mghc.wikidot.com/level-0-2,sub
+Level 0.3,Fully Remodelled,0,"Level 0","Level 0;Level 3",http://backrooms-mghc.wikidot.com/level-0-3,sub
+Level 1.1,Corrupted Corridor,var,"Level 1","Level 1",http://backrooms-mghc.wikidot.com/level-1-1,sub
+Level 1.5,Inverted,?,".",".",http://backrooms-mghc.wikidot.com/level-1-5,sub
+Level 2.1,The Concrete Caverns,4,"Level 2","Level 3;Level 8",http://backrooms-mghc.wikidot.com/level-2-1,sub
+Level 2.2,Constant Buzz,4,"Level 3","Level 2;Level 3;Level 98",http://backrooms-mghc.wikidot.com/level-2-2,sub
+Level 3.1,Space Complex,4,"Level 3","Level 4",http://backrooms-mghc.wikidot.com/level-3-1,sub
+Level 4.1,Whispering Halls,2,"Level 4",".",http://backrooms-mghc.wikidot.com/level-4-1,sub
+Level 4.2,Parking Lot Of Fog,0,".","Level 0;Level 1;Level 4;Level 5",http://backrooms-mghc.wikidot.com/level-4-2,sub
+Level 4.3,Decayed,1,".","Level 4",http://backrooms-mghc.wikidot.com/level-4-3,sub
+Level 4.4,Crazed State,5,"Level 4;Level 4.1;Level 4.2;Level 4.1;Level 611","Level 7;Level 4;Level 4.1;Level 4.2;Level 4.3",http://backrooms-mghc.wikidot.com/level-4-4,sub
+Level 5.1,GRAND OPENING OF THE TERROR HOTEL CASINO,1,"Level 5","Level 5",http://backrooms-mghc.wikidot.com/level-5-1,sub
+
+Level 206.1,Noctilucent Ground,0,"Level 206","Level 206",http://backrooms-mghc.wikidot.com/level-206-1,sub
+
+
+
+
+
+
+
+
+
+
+
+Level -0,Untextured,?,".",".",http://backrooms-mghc.wikidot.com/level-minus-0,negative
+Level -1,Glitched Halls,2,"Level 0","Level -2;Level 0;The Whiteout;Level 2",http://backrooms-mghc.wikidot.com/level-minus-1,negative
+Level -2,Overflow,4,"Level -1","Level 14",http://backrooms-mghc.wikidot.com/level-minus-2,negative
+Level -3,Reflections,3,"Level -1",".",http://backrooms-mghc.wikidot.com/level-minus-3,negative
+Level -4,The Forest of Calamity,?,"Level -1","Level -1;Level -5",http://backrooms-mghc.wikidot.com/level-minus-4,negative
+Level -5,Snowscape,0,"Level -4","Level -6",http://backrooms-mghc.wikidot.com/level-minus-5,negative
+Level -6,Mystery Mines,3,"Level -5",".",http://backrooms-mghc.wikidot.com/level-minus-6,negative
+Level -7,The Cruel Town,4,"Level 10;Level -6;Level -1","Level 10",http://backrooms-mghc.wikidot.com/level-minus-7,negative
+Level -8,Riddle Shafts,?,"Level -7","Level 7;Level -9",http://backrooms-mghc.wikidot.com/level-minus-8,negative
+Level -9,Obstructed Vision,4,"Level 226",".",http://backrooms-mghc.wikidot.com/level-minus-9,negative
+Level -10,Underground City,2,"Level -9;Level -46","Level -11;Level 4.3;Level 11;Level 3;Level 2.2;Level -46;Level 2.1",http://backrooms-mghc.wikidot.com/level-minus-10,negative
+Level -11,Lost And Forgotten,?,"Level 22",".",http://backrooms-mghc.wikidot.com/level-minus-11,negative
+Level -12,The Infinite Mansion,1,"Level 0;Level 1","Level 4",http://backrooms-mghc.wikidot.com/level-minus-12,negative
+Level -13,The Never-Ending River,3,"Level 11;Level 9;Level 313;Level 7;Level -27","Level 7;Level 10",http://backrooms-mghc.wikidot.com/level-minus-13,negative
+Level -14,The Looping Basement,4,"Level 5","Level 0",http://backrooms-mghc.wikidot.com/level-minus-14,negative
+Level -15,If Man Is Still Alive,4,"Level -1","Level -1",http://backrooms-mghc.wikidot.com/level-minus-15,negative
+Level -16,Fold Hallways,1,"Level -15;Level -17;Level -1","Level -17;Level -18",http://backrooms-mghc.wikidot.com/level-minus-16,negative
+Level -17,The Wooden Bridge,1,"Level -16;Level -122;Level -63","Level 4000;Level -16;Level -21;Level -18;Level -27;Level 1970",http://backrooms-mghc.wikidot.com/level-minus-17,negative
+Level -18,The Suites,1,"Level 11;Level -33","Level 11;Level 6.1;Level 36;Level -19;Level -382;Level -150",http://backrooms-mghc.wikidot.com/level-minus-18,negative
+Level -19,Follow The Rules,?,"Level -18","Level 4;Level 404;Level 11;Level -23;Level 36;Level -21;Level -20",http://backrooms-mghc.wikidot.com/level-minus-19,negative
+Level -20,Incoherent Leakage,3,"Level -19","Level -33;Level -21",http://backrooms-mghc.wikidot.com/level-minus-20,negative
+Level -21,Overview,1,"Level -1;Level -17;Level -19;Level -382","Level 17;Level -18;Level -20;Level -22;Level -23;Level -382",http://backrooms-mghc.wikidot.com/level-minus-21,negative
+Level -22,Unrecognized Landscape,2,"Level 4","Level 0;Level 1;Level Fun",http://backrooms-mghc.wikidot.com/level-minus-22,negative
+Level -23,The Farmlands,1,"Level 10;Level 4368;Level -1;Level 26;Level 27","Level -24;Level -122;Level -100;Level 50;Level 80",http://backrooms-mghc.wikidot.com/level-minus-23,negative
+Level -24,Dark Nylon Maze?,?,"Level -25;Level -23","Level 4000;Level -23;Level -25",http://backrooms-mghc.wikidot.com/level-minus-24,negative
+Level -25,Backrooms Space Station,3,"Level 0;Level -24","Level 0;Level -24;Level -43",http://backrooms-mghc.wikidot.com/level-minus-25,negative
+Level -26,Echoes of the Forsaken Halls,5,".","Level -28;Level -27",http://backrooms-mghc.wikidot.com/level-minus-26,negative
+Level -27,Morning View,0,"Level -17;Level -122","Level -28;Level -13",http://backrooms-mghc.wikidot.com/level-minus-27,negative
+Level -28,The Forgotten School,2,"Level 3;Level -26;Level -27","Level 3;Level 2;Level -38",http://backrooms-mghc.wikidot.com/level-minus-28,negative
+Level -29,Pigmentumphobia,2,"Level -18;Level -28","Level -18;The End;Level -122;Level -30;The Basement",http://backrooms-mghc.wikidot.com/level-minus-29,negative
