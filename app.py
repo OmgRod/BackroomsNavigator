@@ -26,6 +26,10 @@ app.index_string = '''
         <title>{%title%}</title>
         {%favicon%}
         {%css%}
+        <meta property="og:title" content="Backrooms Navigator">
+        <meta property="og:description" content="Look at a map of all the levels of the Backrooms and find your way out!">
+        <meta property="og:image" content="/assets/promo.png">
+        <meta property="og:type" content="website">
         <style>
             /* Hide the Dash button */
             .dash-debug-menu {
