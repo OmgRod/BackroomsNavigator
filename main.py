@@ -30,7 +30,7 @@ html_content = f'''
         <title>Backrooms Navigator</title>
         <meta property="og:title" content="Backrooms Navigator">
         <meta property="og:description" content="Look at a map of all the levels of the Backrooms and find your way out!">
-        <meta property="og:image" content="https://omgrod.me/BackroomsNavigator/assets/promo.png">
+        <meta property="og:image:secure_url" content="https://omgrod.me/BackroomsNavigator/assets/promo.png">
         <meta property="og:type" content="website">
     </head>
     <body>
