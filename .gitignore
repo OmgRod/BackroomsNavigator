@@ -122,5 +122,12 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+<<<<<<< HEAD
 *.html
 !index.html
+=======
+fandom-freewriting.html
+fandom.html
+mghc.html
+wikidot.html
+>>>>>>> 1c54d413ec3b27ac37a97e5f75e034d2bec4a525
