@@ -91,14 +91,20 @@ app.layout = html.Div([
                 {'label': 'Variable', 'value': 'var'},
                 {'label': 'Translation Error', 'value': 'TRANSLATION_ERROR'},
                 {'label': 'Integral', 'value': '∫'},
+                {'label': 'N/A', 'value': 'N/A'},
                 {'label': '0', 'value': '0'},
                 {'label': '1', 'value': '1'},
                 {'label': '2', 'value': '2'},
                 {'label': '3', 'value': '3'},
                 {'label': '4', 'value': '4'},
-                {'label': '5', 'value': '5'}
+                {'label': '5', 'value': '5'},
+                {'label': '10e', 'value': '10e'},
+                {'label': 'Run', 'value': '!'},
+                {'label': 'Xi', 'value': 'ξ'},
+                {'label': 'Traumatellix', 'value': 'traumatellix'},
+                {'label': '-2', 'value': '-2'},
             ],
-            value=['?', 'var', 'TRANSLATION_ERROR', '∫', '0', '1', '2', '3', '4', '5'],
+            value=['?', 'var', 'TRANSLATION_ERROR', '∫', 'N/A', '0', '1', '2', '3', '4', '5', '10e', '!', 'ξ', 'traumatellix', '-2'],
             multi=True
         ),
         html.H2("Options"),
@@ -157,9 +163,8 @@ def update_graph(csv_file, n_clicks, level_id, selected_types, selected_difficul
     if level_id:
         filtered_graph = filter_graph_by_level(G, level_id)
     else:
-        filtered_graph = filter_graph(G, selected_types, selected_difficulties)
-    show_green_nodes = 'show' in show_green_nodes
-    filtered_fig = create_plotly_figure(filtered_graph, pos, defined_nodes, show_green_nodes=show_green_nodes)
+        filtered_graph = filter_graph(G, selected_types, selected_difficulties, show_green_nodes='show' in show_green_nodes)
+    filtered_fig = create_plotly_figure(filtered_graph, pos, defined_nodes, show_green_nodes='show' in show_green_nodes)
     level_ids = Utils.get_level_ids(csv_file)
     return filtered_fig, level_ids
 
