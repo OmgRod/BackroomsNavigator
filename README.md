@@ -1,6 +1,6 @@
 # Backrooms Navigator
 
-This repository uses data from the [Backrooms MGHC Wikidot](http://backrooms-mghc.wikidot.com)
+This repository currently uses data from the [Backrooms MGHC Wikidot](http://backrooms-mghc.wikidot.com)
 
 ## Extra Features
 
