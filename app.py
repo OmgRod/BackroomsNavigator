@@ -183,7 +183,7 @@ def shutdown():
 
 def run_app():
     """Run the Dash application."""
-    app.run_server(debug=True)
+    app.run(debug=True)
 
 if __name__ == '__main__':
     if CLOSE_SERVER_AFTER_GENERATION:
