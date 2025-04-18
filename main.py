@@ -19,9 +19,9 @@ G, pos, defined_nodes = create_graph()
 fig = create_plotly_figure(G, pos, defined_nodes)
 
 # Save the Plotly figure as an HTML file
-html_content = fig.to_html(full_html=False, include_plotlyjs='cdn')
+html_content = fig.to_html(full_html=False)
 
-# Add Open Graph meta tags and custom CSS to ensure the graph takes up the full screen
+# Add Open Graph meta tags to the HTML content
 html_content = f'''
 <!DOCTYPE html>
 <html>
@@ -29,25 +29,12 @@ html_content = f'''
         <meta charset="utf-8">
         <title>Backrooms Navigator</title>
         <meta property="og:title" content="Backrooms Navigator">
-        <meta property="og:description" content="Navigate through the mysterious levels of the Backrooms.">
-        <meta property="og:image" content="/assets/promo.png">
+        <meta property="og:description" content="Look at a map of all the levels of the Backrooms and find your way out!">
+        <meta property="og:image:secure_url" content="https://omgrod.me/BackroomsNavigator/assets/promo.png">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="http://localhost:8050">
-        <style>
-            html, body {{
-                height: 100%;
-                margin: 0;
-                overflow: hidden;
-            }}
-            #graph > div {{
-                height: 100%;
-                width: 100%;
-                position: absolute;
-            }}
-        </style>
     </head>
     <body>
-        <div id="graph">{html_content}</div>
+        {html_content}
     </body>
 </html>
 '''
